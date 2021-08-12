@@ -1,0 +1,17 @@
+<!-- 头部 -->
+<view class="head" style="margin-top:{{paddingTopNum}}px">
+     <view class="logo" bindtap="intoIndex">
+          <image class="logo_img" src='/icons/arrow.png'/>
+          <view class="logo_txt">滴滴出行</view>
+     </view>
+</view>
+
+<!-- 页面 -->
+<view class="text" style="margin-top:{{pageToHeight}}px">
+  <view class="search"><view class="city" bindtap="changeCity">{{city}}</view><input class="address" bindinput='destChange'></input></view>
+  <view wx:for="{{destAddressList}}" wx:key="id" class="content" bindtap="clickAdd" data-address="{{item.addr}}">
+    <view class='title'>{{item.title}}</view>
+    <view class='detail'>{{item.addr}}</view>
+  </view>
+</view>
+

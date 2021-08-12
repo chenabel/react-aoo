@@ -1,0 +1,36 @@
+<!--pages/myOrder/myOrder.wxml-->
+<view class="head" style="padding-top:{{paddingTopNum}}px" bindtap="intoIndex">
+     <view class="logo">
+          <image class="logo_img" src='/icons/arrow.png'/>
+          <view class="logo_txt">我的行程</view>
+     </view>
+</view>
+<view class="page" style="margin-top:{{pageToHeight+12}}px" >
+    <view class="allorder" wx:for="{{ordersArr}}" wx:key="id">
+        <view class="orders">
+          <view class="header">
+                <view class="left">{{item.order_type}}</view>
+                <view class="right">{{item.order_state}} ></view>
+          </view>
+          <view class="content">
+                <view class="time">
+                      <image src="/icons/clock.png"></image>
+                      <text>{{item.order_starttime}}</text>
+                </view>
+                <view class="startadr">
+                      <image src="/icons/dot.png"></image>
+                      <text>{{item.order_startadd}}</text>
+                </view>
+                <view class="endadr">
+                      <image src="/icons/dot2.png"></image>
+                      <text>{{item.order_destadd}}</text>
+                </view>
+          </view>
+          <view class="driverInfo">
+                <view class="infoBtn" wx:if="{{item.order_type ==='顺风车' && item.order_state ==='已接单'}}" bindtap="getDriverInfos" data-current="{{index}}">司机信息</view>
+                <view class="pay" wx:if="{{item.order_state==='未支付'}}" bindtap="pay" data-current="{{index}}">立即支付</view>
+          </view>
+        </view>
+    </view>
+</view>
+<view wx:if="{{isReachEnd}}">到底了别扯了</view>

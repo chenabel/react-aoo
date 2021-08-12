@@ -1,0 +1,5 @@
+/* components/pullfresh/pullfresh.wxss */
+.zhuTi{
+  position: fixed;
+  bottom: 10rpx;
+}

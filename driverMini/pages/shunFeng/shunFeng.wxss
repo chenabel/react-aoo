@@ -1,0 +1,187 @@
+.pageCss{
+  background: rgb(242,242,242);
+  position: fixed;
+  bottom: 0rpx;
+  top: 0rpx;
+  left: 0rpx;
+  right: 0rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.head{
+  width: 750rpx;
+  height: 100rpx;
+}
+
+.zhuTi{
+  width: 750rpx;
+  overflow: scroll;
+  position: fixed;
+  top:20rpx;
+}
+
+.msgBox{
+  width: 100%;
+  margin:0 auto;
+  height: 500rpx;
+  background: #000;
+}
+
+.zhuTi1{
+  width: 700rpx;
+  height: 370rpx;
+  background: white;
+  margin-bottom: 20rpx;  
+  border-radius: 20rpx;
+  box-shadow: 30rpx 10rpx 10rpx  rgb(65 65 65 / 10%);
+}
+
+.boxHead{
+  width: 650rpx;
+  height: 70rpx;
+  background: white;
+  line-height: 70rpx;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  border-bottom: 5rpx solid #f7f7f7;
+}
+.boxBody{
+  width: 650rpx;
+  height: 185rpx;
+  margin: 0 auto;
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.beginPlace{
+  display: flex;
+  flex-direction:row;
+  text-align: center;
+
+}
+
+.Place{
+  font-size: 35rpx;
+}
+
+.opderPrice{
+  color: rgb(255, 136, 1);
+}
+.icontubiao_qidian_lanse{
+  font-size: 45rpx;
+  text-align: center;
+  margin-top: -10rpx;
+}
+.orderDistance{
+  color: orange;
+  text-align: center;
+  width: 250rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+}
+.endPlace{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+.icontubiao_zhongdian_hongse{
+  font-size: 45rpx;
+  text-align: center;
+  margin-top: -10rpx;
+}
+.boxFeet{
+  border-top:5rpx solid #f7f7f7; 
+  width: 650rpx;
+  height: 90rpx;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: -4rpx;
+}
+.getOrderBtnBox{
+  width: 200rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  position: relative;
+}
+.getOrderBtn{
+  width: 200rpx;
+  height: 89rpx;
+  background: orange;
+  border-radius:60rpx ;
+  text-align: center;
+  line-height: 89rpx;
+  font-size: 40rpx;
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
+  z-index: 20;
+  margin-top: 5rpx;
+}
+
+.slidenInput{
+  width: 650rpx;
+  height: 100rpx;
+}
+	
+.content {
+  font-size: 24rpx;
+}
+ 
+.sliderContent{
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 50rpx;
+  padding-left: 60rpx;
+  width: 425rpx;
+  box-sizing: border-box;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-radius: 60rpx;
+  background-color: #fff;
+  color: #289adc;
+  box-shadow: 0px 4px 6px 0px rgba(37, 114, 219, 0.3);
+}
+ 
+.sliderContent input {
+  line-height: 70rpx;
+  height: 70rpx;
+  box-sizing: border-box;
+  padding-left: 40rpx;
+  width: 250rpx;
+}
+ 
+.input-placeholder {
+  text-align: center;
+  color: #289adc;
+}
+ 
+ .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150rpx;
+  border-radius: 60rpx;
+  text-align: center;
+  background-color: #7f7f7f;
+  color: #fff;
+  box-shadow: 0px 4px 6px 0px rgba(37, 114, 219, 0.3);
+}
+
+.noOrder{
+  width: 600rpx;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 49%;
+}
+
+.noOrder image{
+  width: 100%;
+  height: 600rpx;
+}
+

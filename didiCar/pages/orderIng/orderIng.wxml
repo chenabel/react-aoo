@@ -1,0 +1,74 @@
+<!--pages/waitAccept/waitAccept.wxml-->
+<view class="head" style="padding-top:{{paddingTopNum}}px" bindtap="cancel">
+     <view class="logo">
+          <image class="logo_img" src='/icons/arrow.png'/>
+          <view class="logo_txt" wx:if="{{ordering}}">订单进行中</view>
+          <view class="logo_txt" wx:else>行程结束</view>
+     </view>
+     
+</view>
+<view class="page" style="margin-top:{{pageToHeight+5}}px">
+     <map id="myMap"
+                longitude="{{longitude}}" latitude="{{latitude}}"
+                scale='16'
+                polyline="{{polyline}}"
+                markers="{{markers}}"
+                show-location
+                >
+     </map>
+</view>
+<view class="driverallInfos" wx:if="{{driverallInfos}}">
+     <view class="top">
+          <view class="carInfos">
+               <view class="drlic">{{driverInfos.drplate}}</view>
+               <view class="carname">{{driverInfos.carcolor}}·{{driverInfos.cartbrand}}</view>
+               <view class="cartype">{{driverInfos.cartype}}</view>
+          </view>
+
+          <view>
+               <image class="driverimg" src="/icons/driverhead.png"/>
+               <view class="drivername">{{driverName}}</view>
+          </view>
+          <view class="driverInfos">
+               <view class="comment">
+                    <image class="star" src="/icons/star.png"></image>
+                    <view class="commentsorce">4.6</view>
+                    <view class="oredernum">112单</view>
+               </view>
+          </view>
+     </view>
+     <view class="footer">
+          <image src="/icons/tel.png" bindtap="calltel"></image>
+     </view>
+     
+</view>
+<view class="pay" wx:if="{{pay}}">
+     <view class="top">
+          <view class="carInfos">
+               <view class="drlic">{{driverInfos.drplate}}</view>
+               <view class="carname">{{driverInfos.carcolor}}·{{driverInfos.cartbrand}}</view>
+               <view class="cartype">{{driverInfos.cartype}}</view>
+          </view>
+
+          <view>
+               <image class="driverimg" src="/icons/driverhead.png"/>
+               <view class="drivername">{{driverName}}</view>
+          </view>
+          <view class="driverInfos">
+               <view class="comment">
+                    <image class="star" src="/icons/star.png"></image>
+                    <view class="commentsorce">4.6</view>
+                    <view class="oredernum">112单</view>
+               </view>
+          </view>
+     </view>
+     <view class="paymoney">支付</view>
+     <view class="money">{{money}}元</view>
+     <view class="confirmPay" bindtap="paymoney">确认支付</view>
+</view>
+<view class="comment" wx:if="{{comment}}">
+     <view class="top">
+          <star key="{{key}}" bind:comment="comment"></star>
+          <view class="score">{{score}}</view>
+     </view>
+</view>

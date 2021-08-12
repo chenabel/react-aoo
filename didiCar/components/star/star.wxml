@@ -1,0 +1,18 @@
+
+<view class='starbox'>
+  <text class='startext'>司机综合评分:</text>
+  <view class='imgbox' wx:if="{{showTap}}" >
+    <block wx:for="{{stars}}" wx:key="id">
+      <image class="star-image" style="left: {{item*80}}rpx" src="{{key > item ?(key-item == 0.5?halfSrc:selectedSrc) : normalSrc}}">
+        <view class="item" style="left:0rpx" data-key="{{item+0.5}}" bindtap="selectLeft"></view>
+        <view class="item" style="left:35rpx" data-key="{{item+1}}" bindtap="selectRight"></view>
+      </image>
+    </block>
+  </view>
+  <view class='imgbox' wx:else>
+    <block wx:for="{{stars}}" wx:key="id">
+      <image class="star-image" style="left: {{item*80}}rpx" src="{{key > item ?(key-item == 0.5?halfSrc:selectedSrc) : normalSrc}}">
+      </image>
+    </block>
+  </view>
+</view>

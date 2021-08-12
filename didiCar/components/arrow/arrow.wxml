@@ -1,0 +1,6 @@
+<view class="head" style="padding-top:{{paddingTopNum}}px">
+     <view class="logo">
+          <image class="logo_img" src='/icons/arrow.png'/>
+          <view class="logo_txt">个人中心</view>
+     </view>
+</view>

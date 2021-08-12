@@ -1,0 +1,36 @@
+<!--pages/myOrderPage/myOrderPage.wxml-->
+<view class="page">
+  <view class="pageHead" style="height:{{headHeight}}rpx">
+    <head page-name="我的订单"></head>
+  </view>
+  <view class="zhuTi" style="top:{{headHeight}}rpx">
+    <scroll-view class="msgBox" scroll-y="true" scroll-top="{{top}}" style="top:{{headHeight}}rpx">
+      <view class="orderBox" wx:for="{{orderList}}"  wx:key="index">
+        <view bindtap="clickOrder" data-oid="{{item.driver_id}}">
+            <view class="orderBoxHead">
+              <view class="orderBoxHeadLeft">
+                收入:<text style="color:orange;">{{item.order_price}}</text>元
+              </view>
+              <view class="orderBoxHeadRight">
+                {{item.order_state}}<view class="iconfont iconleft"></view>
+              </view>
+            </view>
+            <view class="orderBoxBody">
+              <view class="orderBoxBodyTime">
+                <view class="iconfont iconshizhong"></view>　{{item.order_starttime}}
+              </view>
+              <view class="orderBoxBodyTime">
+                <view class="begin"></view>　<view>{{item.order_startadd}}</view>
+              </view>
+              <view class="orderBoxBodyTime">
+                <view class="end"></view>　<view>{{item.order_destadd}}</view>
+              </view>
+            </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="myfeet">
+    <pageTab></pageTab>
+  </view>
+</view>

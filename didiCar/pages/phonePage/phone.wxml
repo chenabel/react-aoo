@@ -1,0 +1,19 @@
+<view class="head" style="padding-top:{{paddingTopNum}}px" bindtap="cancel">
+     <view class="logo" bindtap="intoIndex">
+          <image class="logo_img" src='/icons/arrow.png'/>
+          <view class="logo_txt">添加手机号码</view>
+     </view>
+</view>
+<view class="page" style="margin-top:{{pageToHeight}}px">
+     <view class="phone">
+          <label>手机号码:</label>
+          <input class="inputphone" bindinput="inputPhone" placeholder="请输入有效手机号" type="text"/>
+          <button class="click_verify" bindtap="sendCode" disabled="{{downCount>0}}">{{ downCount > 0 ? downCount + '秒后重新发送':'获取验证码'}}</button>
+     </view>
+     <view class="verifycode">
+          <label>验证码:</label>
+          <input type="text" class="inputcode" bindinput="inputCode" placeholder="输入6位验证码"/>
+     </view>
+     <view bindtap="verify" class="commit">完成</view>
+</view>
+

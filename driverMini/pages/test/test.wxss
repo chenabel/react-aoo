@@ -1,0 +1,11 @@
+.pageHead{
+  width: 750rpx;
+}
+.zhuTi{
+  width: 700rpx;
+  position: fixed;
+  top: 0rpx;
+  bottom: 100rpx;
+  left: 25rpx;
+}
+ 

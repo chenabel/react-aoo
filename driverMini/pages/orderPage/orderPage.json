@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "head":"/components/homeHead/homeHead",
+    "homeTab":"/components/pageTab/pageTab"
+  }
+}

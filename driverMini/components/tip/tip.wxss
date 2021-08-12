@@ -1,0 +1,22 @@
+.inner {
+  color: red;
+}
+.weui-toptips_warn {
+  background-color: #e85d59;
+}
+.weui-toptips {
+  position: fixed;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10rpx;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  z-index: 5000;
+  word-wrap: break-word;
+  word-break: break-all;
+  border-radius: 10rpx;
+}

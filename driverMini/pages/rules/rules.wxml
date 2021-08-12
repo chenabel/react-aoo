@@ -1,0 +1,32 @@
+<view>
+  <view class="pageHead" style="height:{{headHeight}}rpx">
+    <head page-name="计费规则"></head>
+  </view>
+  <view class="zhuTi" style="top:{{headHeight}}rpx">
+    <view class="body"  style="top:{{headHeight}}rpx">
+      <view class="topTitle">
+        <view class="item">
+          滴滴计费规则
+        </view>
+        <view class="tip">
+          一切以公开透明为主要准则
+        </view>
+      </view>
+      <view class="rulesOne">
+        <view class="title">3公里以内:</view>3.55元/Km (含3公里)
+      </view>
+      <view class="rulesOne">
+        <view class="title">5公里以内:</view>2.83元/Km (含5公里)
+      </view>
+      <view class="rulesOne">
+        <view class="title">9公里以内:</view>2.57元/Km (含9公里)
+      </view>
+      <view class="centent">
+        　　本应用程序处于测试阶段，一切的规则样式，如有雷同纯属巧合，无意冒犯敬请原谅。
+      </view>
+    </view>
+  </view>
+  <view>
+    <pageTab page-url="{{nowPageUrl}}"></pageTab>
+  </view>
+</view>

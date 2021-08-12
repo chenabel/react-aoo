@@ -1,0 +1,63 @@
+<!--pages/orderPage/orderPage.wxml-->
+<view>
+  <view class="pageHead" style="height:{{headHeight}}rpx">
+    <head page-name="订单进行中"></head>
+  </view>
+  <view class="zhuTi" style="top:{{headHeight}}rpx">
+    <map id='map' longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" polyline="{{polyline}}" bindregionchange="regionchange" show-location ></map>
+  </view>
+  <view class="orderInfo" catchtouchmove="handletouchmove" catchtouchend="handEnd" style="height:{{orderInfoHeight}}rpx"wx:if="{{chooseSize}}" animation='{{animationData}}'>
+    <view class="boxOne">
+      <view class="boxOneTop">
+        <view wx:if="{{isUserFlag == true}}" class="title">
+          距离目的地还剩:<text>{{distance}}</text>
+        </view>
+        <view class="userOutCar" wx:if="{{isUserFlag == false}}" catchtap="IamHere" >通知乘客我已到达出发点</view>
+        <view class="userOutCar" wx:if="{{isUserFlag == true}}" catchtap="userOutCar" data-oid="{{orderInfo.driver_id}}">
+          已经到达目的地地点
+        </view>
+      </view>
+      <view class="boxOneButtom">
+        <image class="jianTou" style="transform:rotate({{angle}}deg);" animation='{{animationData2}}'
+          src="https://website.didiglobal.com/dist/media/home-arr-down.f667c61a.svg"></image>
+        <image class="jianTou1" style="transform:rotate({{angle}}deg);" animation='{{animationData2}}'
+          src="https://website.didiglobal.com/dist/media/home-arr-down.f667c61a.svg"></image>
+      </view>
+    </view>
+    <view class="boxTwo">
+      <view class="msgTitle">
+        <text>顾客电话</text>
+      </view>
+      <view class="msgBox">
+        <scroll-view class="msgBox" scroll-y="true" scroll-top="{{top}}">
+          <view class="msg" wx:for="{{msgs}}" wx:key="index" >
+            <view wx:if="{{item.from == 'user' }}">
+              <view wx:if="{{item.msgTent != ''}}">
+                <text class="Time">{{item.msgTime}}</text>
+                <view class="msgTentAndUserBox">
+                  <view class="userBox1">{{item.msgName}}</view>
+                  <text class="msgTent1">{{item.msgTent}}</text>
+                </view>
+              </view>
+            </view>
+            <view wx:if="{{item.from == 'driver' }}">
+                <view wx:if="{{item.msgTent != ''}}">
+                  <text class="Time">{{item.msgTime}}</text>
+                  <view class="msgTentAndUserBox">
+                    <text class="msgTent">{{item.msgTent}}</text>
+                    <view class="userBox">{{item.msgName}}</view>
+                  </view>
+                </view>  
+            </view>          
+          </view>
+        </scroll-view>
+      </view>
+      <view class="sendMsgBox">
+        <input bindblur="inputText" class="msgText" value="{{textValue}}" type="text" />
+        <view catchtap="sendMessage" class="sendMsg">
+          发送
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

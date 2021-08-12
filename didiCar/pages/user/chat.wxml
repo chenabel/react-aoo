@@ -1,0 +1,36 @@
+<!--pages/user/chat.wxml-->
+<view style="margin-top:{{paddingTopNum}}px">
+  <image class="logo_img" src='/icons/arrow.png'/>聊天
+</view>
+<scroll-view class="chatscroll" scroll-y='true' scroll-top="{{top}}" bindscrolltoupper="pause" bindscrolltolower="continue">
+          <view class="chatcontent" wx:for="{{chatArr}}" wx:key="id">
+               <view class='time'>{{item.time}}</view>
+               <view class="userchat" wx:if="{{item.usertype==='user'}}">
+                    <view class="usermsg">
+                         <view class="triangle_two"></view>
+                         <view class="fill_two"></view>
+                         <view>{{item.msg}}</view>
+                    </view>
+                    <view class="uesrhead">
+                         <image class='chathead' src='{{userhead}}'/>
+                         <view>{{item.who}}</view>
+                    </view>
+                    
+               </view>
+               <view class="driverchat" wx:else>
+                    <view class="driverhead">
+                         <image class='chathead' src='/icons/driverhead.png'/>
+                         <view>{{item.who}}</view>
+                    </view>
+                    <view class="usermsg">
+                         <view class="triangle"></view>
+                         <view class="fill"></view>
+                         <view>{{item.msg}}</view>
+                    </view>
+               </view>
+          </view>
+</scroll-view>
+<view class="chattext">
+    <textarea type="tex" bindinput='changeMessage' placeholder="请输入消息" value="{{chatcontent}}"></textarea>
+    <view bindtap="sendMessage">发送消息</view>
+</view>

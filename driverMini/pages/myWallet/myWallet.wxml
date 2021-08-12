@@ -1,0 +1,32 @@
+<view>
+  <view class="pageHead" style="height:{{headHeight}}rpx">
+    <head page-name="我的钱包"></head>
+  </view>
+  <view class="zhuTi" style="top:{{headHeight}}rpx">
+    <view class="top">
+      <view>
+        邀请朋友一起成为滴滴车主，一起赚外快！
+      </view>
+      <view class="iconfont iconleft"></view>
+    </view>
+    <view class="body">
+      <view class="bodyTop">
+        <view class="iconfont iconyue"></view>
+        <view class="money">余额:</view>
+        <view class="moneyNum">{{money}}</view>
+        <view class="company">元</view>
+        <view class="iconfont iconleft"></view>
+      </view>
+      <view>
+        <view class="getMoney" bindtap="getMoneyClick">
+          提现
+        </view>
+      </view>
+      <view></view>
+    </view>
+    <view></view>
+  </view>
+  <view>
+    <pageTab page-url="{{nowPageUrl}}"></pageTab>
+  </view>
+</view>

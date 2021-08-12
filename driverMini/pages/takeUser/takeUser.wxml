@@ -1,0 +1,31 @@
+<!--pages/takeUser/takeUser.wxml-->
+<view class="pageCentent">
+  <view class="pageHead" style="height:{{headHeight}}rpx">
+    <head page-name="订单进行中"></head>
+  </view>
+  <view class="zhuTi" style="top:{{headHeight}}rpx">
+    <view class="pageBody">
+      <view class="bodyHead">订单信息</view>
+      <view class="body">
+        <view>订单号:<text class="orderItem">{{orderList.order_id}}</text></view>
+        <view>用户名:<text class="orderItem">{{orderList.order_passenger}}</text></view>
+        <view>出发地:<text class="iconfont icontubiao_qidian_lanse orderItem">{{orderList.order_startadd}}</text></view>
+        <view>目的地:<text class="iconfont icontubiao_zhongdian_hongse orderItem">{{orderList.order_destadd}}</text></view>
+        <view>出发时间:<text class="orderItem">{{orderList.order_pretime}}</text></view>
+        <view>乘客电话:<text class="orderItem">{{orderList.order_tel}}</text></view>
+        <view>全程:<text class="orderItem wholeCourse">{{orderList.order_distance}}km</text></view>
+        <view>预计收入:<text class="orderItem allPrice">{{orderList.order_price}}元</text></view>
+        <view></view>
+        <view></view>
+        <view></view>
+      </view>
+      <view class="bodyFeet">
+        <view class="bodyFeetLeft"></view>
+        <view class="bodyFeetRight" bindtap="getUser" data-oid="{{orderList.order_id}}">导航去接乘客</view>
+      </view>
+    </view>
+  </view>
+  <view>
+    <pageTab></pageTab>
+  </view>
+</view>

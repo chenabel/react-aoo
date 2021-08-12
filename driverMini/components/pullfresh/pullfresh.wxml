@@ -1,0 +1,4 @@
+<scroll-view class="zhuTi" scroll-y style="top:{{headHeight}}rpx;" refresher-enabled="{{true}}"  refresher-default-style="black" refresher-triggered="{{triggered}}" bindrefresherpulling="onPulling" bindrefresherrefresh="onRefresh"
+  bindrefresherrestore="onRestore" bindrefresherabort="onAbort" bindscrolltolower='onLoadmore'>
+  <slot name='content'></slot>
+</scroll-view>

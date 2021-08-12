@@ -1,0 +1,6 @@
+<!--pages/showWatting/showWatting.wxml-->
+<view>
+  <view>
+    <head page-name="请耐心等待"></head>
+  </view>
+</view>

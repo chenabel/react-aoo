@@ -1,0 +1,2 @@
+<!--components/tip/tip.wxml-->
+<view class="weui-toptips weui-toptips_warn"  hidden="{{showTopTips}}">12312312313132131</view>

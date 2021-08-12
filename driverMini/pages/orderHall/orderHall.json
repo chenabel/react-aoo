@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "head":"/components/homeHead/homeHead",
+    "pageTab":"/components/pageTab/pageTab",
+    "pullfresh":"/components/pullfresh/pullfresh"
+  },
+  "enablePullDownRefresh": true
+}

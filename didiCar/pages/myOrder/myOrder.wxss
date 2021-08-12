@@ -1,0 +1,88 @@
+.head {
+  position: fixed;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  background: #fff;
+  top: 0;
+  left: 0;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+}
+.logo_img {
+  height: 23px;
+  width: 23px;
+}
+.logo_txt {
+  line-height: 30px;
+  font-size: 17px;
+  margin-left: 10px;
+  color: #020202;
+  font-weight: 580;
+}
+.startadr image,.endadr image{
+   width: 20px;
+   height: 20px;
+}
+.time image {
+  width: 8px;
+  height: 8px;
+  margin-right: 5px;
+}
+.orders {
+  width: 97%;
+  margin: 10px 0;
+  margin-left: 1.5%;
+  height: 155px;
+  background: white;
+  border-radius: 15rpx;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+.time {
+  margin-left: 12px;
+  padding: 6px 0;
+}
+
+.header .right {
+  margin-right: 12px;
+}
+.startadr  {
+  margin-left: 6px;
+}
+.endadr {
+  margin-left: 5px;
+}
+.endadr,.startadr ,.time {
+  display: flex;
+  align-items: center;
+}
+.page {
+  background: #eaebed;
+  padding: 15px 0;
+  color: #bbbbbb;
+}
+.header .left {
+  margin-left: 12px;
+  color: #555555;
+}
+.driverInfo{
+ display: flex;
+ justify-content: flex-end;
+ margin-top: 10px;
+}
+.infoBtn,.pay {
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  background: #eaebed;
+  border-radius: 22rpx;
+  text-align: center;
+  margin: 0 6px;
+}

@@ -1,0 +1,129 @@
+/* pages/waitAccept/waitAccept.wxss */
+.head {
+  position: fixed;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  background: #fff;
+  top: 0;
+  left: 0;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+}
+.logo_img {
+  height: 23px;
+  width: 23px;
+}
+.logo_txt {
+  line-height: 30px;
+  font-size: 17px;
+  margin-left: 10px;
+  color: #020202;
+  font-weight: 580;
+}
+map {
+  width: 100%; 
+  height: 100vh;
+}
+
+.driverallInfos {
+  position: fixed;
+  top: 12%;
+  width: 100%;
+  height: 125px;
+  background: white;
+}
+.pay{
+  position: fixed;
+  bottom: 2%;
+  width: 100%;
+  height: 50%;
+  background: white;
+}
+.paymoney , .money , .confirmPay{
+  display: flex;
+  justify-content: center;
+}
+.money {
+  font-size: 25px;
+  margin-top: 10px;
+}
+.confirmPay{
+  margin: 0 auto;
+  margin-top: 30px;
+  height: 20px;
+  padding: 12px 0;
+  background: #0b1e44;
+  color: white;
+  width: 94%;
+  border-radius: 17rpx;
+}
+
+.pay .paymoney{
+   font-weight: 600;
+   font-size: 25px;
+   margin-top: 10px;
+}
+.top {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  align-items: center;
+}
+
+.footer{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.footer image{
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 27px;
+  height: 27px;
+  margin-right: 20px;
+}
+
+.driverimg {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+.star {
+  width: 25px;
+  height: 25px;
+}
+.comment {
+  display: flex;
+  align-items: center;
+  height: 70px;
+}
+.carInfos {
+  color: #adadac;
+}
+.drlic {
+  color: #020202;
+  font-weight: 600;
+  font-size: 22px;
+}
+.oredernum {
+  margin-left: 5px;
+}
+.comment{
+  position: fixed;
+  bottom: 2%;
+  width: 100%;
+  height: 30%;
+  background: white;
+  
+}
+
+.score{
+  margin-right: 40px;
+  font-size: 18px;
+}
+star{
+  margin-left: 10px;
+}

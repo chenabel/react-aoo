@@ -1,0 +1,26 @@
+.head {
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  background: orange;
+  display: flex;
+  justify-content: flex-start;
+  position: fixed;
+  top: 0rpx;
+  z-index: 20;
+}
+
+.bigView{
+  width: 200rpx;
+  display: flex;
+  justify-items: center;
+  margin-left: 20rpx;
+}
+
+.pageName{
+  width: 350rpx;
+  height: 70rpx;
+  text-align: center;
+  font-size: 30rpx;
+  line-height: 70rpx;
+}

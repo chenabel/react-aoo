@@ -1,0 +1,95 @@
+<view class="miniApp">  
+  <view>
+    <navi page-name="滴滴打车司机版"></navi>
+  </view>
+  <view class="zhuTi" style="top:{{headHeight}}rpx;">
+    <!-- <button bindtap="goLoginPage">登陆</button>
+    <button bindtap="goResgister">注册</button> -->
+    <view class="zhuTiBg"></view>
+    <view class="zhuTiBox">  
+      <view class="zhuTiFrist1">
+        <view class="headerTitle">
+          <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEEAAAARCAYAAAH1fvEkAAAAAXNSR0IArs4c6QAABS9JREFUWAmVV31oHEUUf2/20pxiCkVE0GI1tVLQqrm7pGqr2IJaxZQUbdEqqFjFL0TBf2qTy+aSpqhg1T9UFKkgVq1SiyJVEStCQuPdJQgVxUIxBRUqira2vTO3+3wzt7OZuZu904Xc/D7ezM7Ox5sJ0GBuPQ1lHgR+KJ/dLf8iTIy/lFjgWOmjuph5AET/3RIbzxqJhRK81DSI1Az6fsjV9pKfux0LZWQ8Qn7vlSBfZb5OVuLXyFeRxAI8cVwC/cj+qBZYoOHsLoF+6V3g19BQdgWHb5GvUcH8CkCcRUn0KyTG0enXlBZ9mcSwoHMrDk7ORrp6tcT6TaoRZUZDo0xXQ6LrEfS/+lPFRt+gYvmjsW0vwo5RHDv4vauy1ASQ+EMC+ejGuIub6wr/irmhGBuAB+pDSeXEfWDoTkjbV54rDf3tKohgQJb1SUVxWon8Q/nc/QqL7nu1BtXazhgbgIZzO+cH0u/LaQ/9b0oSy9Uxr833lHU/1iXQ367FuPTS+9CfPKY5DfeOAoVLNTdLa9zY4OW4DsJwvxmjsTUULNaHoVB+XQdYZVAZoB2rF2kNR4pyUn7R3Cx5Yt42OfrFT3mW7jQ1jfWW0Fx1AnlVwYqlb2jRKk+d2kj+9Wdpjb/iKZ7WeAVpHQiQ5+atmDNQu0rAw6amsdmR+kjICpveD2Ax7tJBVhkc38wdSWsNC6XHGP+teVwSeXJPx5wB+uVXeby3mprGuiPWxtKmKtP4MW4r/6o18rN5CGG55mbZtB5GsmsgAJXwzDiJm9cDwm+NQYpXqN/U+WsKJjcx+ZmLTY7D5QMmNzFPl7VQBRam1Q43gzSm8b6zNY7Kow28TkNs7pyADc5YonWmrteBSnymofDp2m2WJvqftrhBaOzq8w0q53+fyU3Mo/CO5vUOeOsT0xv5KxfqYHUcAcR5QuuqnPvnWYtLIsR9TZoUiO7QuuqAahjhpBatMqhtsrjo4u3oeOR2bJgyzgtvOiKVxKPwigR6ChgtfM8dTIJ3wJna43OqBgh/aW6V1eB5i0si8MkmTQpED8ki7kC9YaxKsekJMB4y5WFXQqPQQc+s6jLrc1J6weQm5ryxI2UKILp5ccxebmkOwp2t8AGz12EBVKqrWbe2Gng4wBmzxxWPvMgWQzB3i8tM1BB/5oTySZKvLjbozoBJdXiqDvFojSf6kcFrZ4Kn75p2cZYvxCpej5OWZhB1xNO2niXciZsMvT30vKPqAEyI5LWb4ezt3jQJdThXz/Bx81yiHRl8lMgrSLZdnOWnUjnMT5UtLSL1bLB9ZhY87wtXQKIWBBfwpeqGJJ/z4TSk4MUk361TDw3lnnB7hjpS6uUr8yFDaQ9rtSJvn8tcgUZCKB6BBR2Jx5mrMt/bLqLBzFqnxyLmy1Occl5O8p06Uh8P7qNOLxLVjQpvvYIH4sdWcQ0e8jb6lvy+Sxp0TrANDy/j5RDQdQ1ya+p5P/DW+DopiO8OayHELUm+WxcHsFB032GjCnxrSwGdOMwJ70J3Gw4VkY+V1DL0D/6k3aZBkIZaNkH4/5IPiO9wtDShG24sKZ/hnIP3NOotuRCftzpgZV166eZO+P3YER6I81q2ZZtVEOlu9CfU5T/eDmYMZ2neb6kpU2uPw0t5xq9KiuPL4GcgvN1JvlMPwxt58O5yepGIj++v8npextR923VX7gSqHKbxa8+RtnMl6HoqwweU0/y/ld4MjhaLSbGU79sAEGxM8p26IP4/cnqP04tEdTk5WZlluqhVnO3hCTgjveRfvrHNLlDH3yIAAAAASUVORK5CYII=" class="vearSmallImg"/>　
+          <text>滴滴司机招募中</text>　
+          <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEEAAAARCAYAAAH1fvEkAAAAAXNSR0IArs4c6QAABPRJREFUWAmVV2toXFUQnjl3k1pM66OtWFToQwqFVGt3N23UaqBafDRFoa1V1D/i44fVKhYqZDc32VgNEZ/9o4J/KlpJqUoLERVJQdFmd4MiKKJisSIKrdZHmqTZvePM3T035949d7N7IJmZb75zztw5cx6LwI2ySRKJ/UVk/e2qfg9l1j0EzvyjSoBq+0krTK4QGED3898UuandoLCPHVeyvo31wz7ZSYyD0/qR7uhPR9nUqAB6OplK/hQ7SuLA/kKXdortN1LHEqBggN0VgKdAt3CI3I4UA+Pojn1f9cx+lTDly0SSm3wSPBCy3+QjRPG/tAIB5sZf979Yp0XwYIBM6v5GBvD7VAcM8hsaKJvMsL1ac2yR1ETB5K91h7k6S8rNhfP78SxrReE8POIDdf6h++UJRb2pyYCD+Huge3CD1m2hc8a+EH+CV2oQsLIovFSugORuWAZQqlSHALpJpVQbL+U3ogbLKQaXVQd4dFz0aNMrZOI1BaSdCWcQs2NBLqkndRugd7l2mzIoBwEpt2F1XACguh2zo8+v7qYoDkrtDwWQTW+qF4D0rxTwQPoKOOf9UjOgAJdBKz5cnDF9sRlQ6k10859oLm+AjawH5ahxkZIBbSva17EoNoAFi9oaDgDw3VAAsrQNBOAHpKMRSf3pG6HkjZqY1puqCZUYQPf4t7ovZdd1A8FSbZsyvK9iJueqHzM7iU6Z5N4opm1zch+LmRzmOSNBANTfcbUeICqxr7A+inEVXVWDCUDqRRPnA2KzaZs69uRPBgFAuRzsWZPE+ncRW87BXVFM25jL57XuyzItC9nacOBTUf0AKJdcyWs0G4wmiWxfscY0q3qnBZOvf83E+ZzpMm1TR3f8R7Erk87UfmWFjCdxx3DZ7Mg32wOmber89cdMG8reqpCtDaflM63yhZu+lI0WDYSkarMMQJtCHG04eECrInnca03b1M0iVeB5fipMQkXH0+iOTpk4p3SnaZs69hZGTJtrqj1ka8NxQjuK3wL4vPaF5HkUquaqrxQ8SUJkdcI0ufIXAzjWouZL6SuTG7qcTIfofHV+DEQ3RfG6tlI3m6eijcuPnVXglV2bLxZD+AH7ir1xfr+UyuWtcX4rjuoPfqV9UHPpaTL1Jo/w7rxF2w1J5XRzAj6sx+VgV3Dp9dfj1PgQf+YEyJPL2ujpa5YA0h1WZxxIcApzxffFbT2CuAKGOQFb4vpbcYXbucyOWn1VkOQR4Hn8DG6m4a/g5nviepDbeTEk8M44vxVH/Atyxfe0ryYJnIADvAW2aUJDUqn75E1fj0vPJJfCjPdcPU6tj1+vasteRPR/7ET95K69EMrTzcWKzt/QVzhkjpkwB+Yt8AYn4F4Tm1NX8CBvgbfq8WjfxiUwdXaIOXXPoMgYp6B9+R7c4XoR3Ddp8LoFMDG53eaLx/A/ULcPmwkQbhAUV8CrnIBH4weweBTu4grYb/EEED17/UUwOfUyH7OhhAcEu3KG38iPR5+omkpDm8+Hf07fLc8BjTUgz8Kale9EL3vp5w/CFTDUfALUnjkT4K5fCJOTfM01kQDEf2HxJU/EJuCFzvkw8eddzSVATYGz8KAtAX4SqDed40PwqQYyOUtRkOEtYL/bqyxyu9r4GnyJzdbZjnNoCBNwQctufGxk2sakV26dB2emd/Lzq5mqOgfO8oP84CnZxhTsfzOkyUmK9kqyAAAAAElFTkSuQmCC" class="vearSmallImg"/>
+        </view>
+        <view class="headerTwoBtn">
+          <view class="iHaveCar" style="background:{{twoBtnFlage.banckground}};color:{{twoBtnFlage.color}};border:{{twoBtnFlage.border}}" bindtap="iHaveCar">
+            自己有车跑滴滴
+            <image src="data:image/png;base64,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" class="selected" style="display:{{twoBtnFlage.display}}"/>
+          </view>
+          <view class="iHaveCar2" style="background:{{twoBtnFlage2.banckground}};color:{{twoBtnFlage2.color}};border2:{{twoBtnFlage.border}}" bindtap="iHaveCar">
+            租车/购车跑滴滴
+            <image src="data:image/png;base64,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" class="selected2" style="display:{{twoBtnFlage2.display}}"/>
+          </view>
+        </view>
+        <view class="telInputBox">
+          <view class="">
+            <input type="number" class="telInput" value="{{telNum}}" bindinput="inputTelNum" wx:model="telNum" placeholder="请输入电话号码" maxlength="11" bindblur="inText"></input>
+          </view>
+          <view class="tips" wx:if="{{isTelNum == true}}">
+              您输入的电话号码长度不足11位！
+          </view>
+          <view class="tips" wx:if="{{isTelNum2 == true}}">
+              您输入的电话号码不符合运营商规则！
+          </view>
+          <view class="tips" wx:if="{{isTelNum5 == true}}">
+            电话不能为空！
+          </view>
+        </view>
+        <view class="getAddBox">
+          <input type="text" class="telInput" value="{{nowAdd}}" disabled='true' placeholder="请选择所在城市"></input>
+          <view class="getAddFoo" bindtap="cityChooese">
+            请选择<view class="iconfont iconxiangyou"></view>
+          </view>
+        </view>
+        <view class="inputCodeBox">
+          <view>
+            <input type="number" class="inputCode" bindinput="inputCode" maxlength="6"  placeholder="请输入验证码"></input>
+          </view>
+          <view class="getCode" bindtap="getCode">
+            {{getCodeText}}
+          </view>
+        </view>
+        <view class="tips" wx:if="{{isTelNum3 == true}}">
+            验证码不能为空！
+        </view>
+        <view class="treatyBox">
+          <checkbox bindtap="checkboxFee"></checkbox>同意《加入滴滴的条件说明和承诺》
+        </view>
+        <view class="doResgisterBox">
+          <view class="doResgister" bindtap="doResgister">立即注册</view>
+        </view>
+      </view>
+      <view class="zhuTiFrist">
+        <view class="headerTitle">
+          <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEEAAAARCAYAAAH1fvEkAAAAAXNSR0IArs4c6QAABS9JREFUWAmVV31oHEUUf2/20pxiCkVE0GI1tVLQqrm7pGqr2IJaxZQUbdEqqFjFL0TBf2qTy+aSpqhg1T9UFKkgVq1SiyJVEStCQuPdJQgVxUIxBRUqira2vTO3+3wzt7OZuZu904Xc/D7ezM7Ox5sJ0GBuPQ1lHgR+KJ/dLf8iTIy/lFjgWOmjuph5AET/3RIbzxqJhRK81DSI1Az6fsjV9pKfux0LZWQ8Qn7vlSBfZb5OVuLXyFeRxAI8cVwC/cj+qBZYoOHsLoF+6V3g19BQdgWHb5GvUcH8CkCcRUn0KyTG0enXlBZ9mcSwoHMrDk7ORrp6tcT6TaoRZUZDo0xXQ6LrEfS/+lPFRt+gYvmjsW0vwo5RHDv4vauy1ASQ+EMC+ejGuIub6wr/irmhGBuAB+pDSeXEfWDoTkjbV54rDf3tKohgQJb1SUVxWon8Q/nc/QqL7nu1BtXazhgbgIZzO+cH0u/LaQ/9b0oSy9Uxr833lHU/1iXQ367FuPTS+9CfPKY5DfeOAoVLNTdLa9zY4OW4DsJwvxmjsTUULNaHoVB+XQdYZVAZoB2rF2kNR4pyUn7R3Cx5Yt42OfrFT3mW7jQ1jfWW0Fx1AnlVwYqlb2jRKk+d2kj+9Wdpjb/iKZ7WeAVpHQiQ5+atmDNQu0rAw6amsdmR+kjICpveD2Ax7tJBVhkc38wdSWsNC6XHGP+teVwSeXJPx5wB+uVXeby3mprGuiPWxtKmKtP4MW4r/6o18rN5CGG55mbZtB5GsmsgAJXwzDiJm9cDwm+NQYpXqN/U+WsKJjcx+ZmLTY7D5QMmNzFPl7VQBRam1Q43gzSm8b6zNY7Kow28TkNs7pyADc5YonWmrteBSnymofDp2m2WJvqftrhBaOzq8w0q53+fyU3Mo/CO5vUOeOsT0xv5KxfqYHUcAcR5QuuqnPvnWYtLIsR9TZoUiO7QuuqAahjhpBatMqhtsrjo4u3oeOR2bJgyzgtvOiKVxKPwigR6ChgtfM8dTIJ3wJna43OqBgh/aW6V1eB5i0si8MkmTQpED8ki7kC9YaxKsekJMB4y5WFXQqPQQc+s6jLrc1J6weQm5ryxI2UKILp5ccxebmkOwp2t8AGz12EBVKqrWbe2Gng4wBmzxxWPvMgWQzB3i8tM1BB/5oTySZKvLjbozoBJdXiqDvFojSf6kcFrZ4Kn75p2cZYvxCpej5OWZhB1xNO2niXciZsMvT30vKPqAEyI5LWb4ezt3jQJdThXz/Bx81yiHRl8lMgrSLZdnOWnUjnMT5UtLSL1bLB9ZhY87wtXQKIWBBfwpeqGJJ/z4TSk4MUk361TDw3lnnB7hjpS6uUr8yFDaQ9rtSJvn8tcgUZCKB6BBR2Jx5mrMt/bLqLBzFqnxyLmy1Occl5O8p06Uh8P7qNOLxLVjQpvvYIH4sdWcQ0e8jb6lvy+Sxp0TrANDy/j5RDQdQ1ya+p5P/DW+DopiO8OayHELUm+WxcHsFB032GjCnxrSwGdOMwJ70J3Gw4VkY+V1DL0D/6k3aZBkIZaNkH4/5IPiO9wtDShG24sKZ/hnIP3NOotuRCftzpgZV166eZO+P3YER6I81q2ZZtVEOlu9CfU5T/eDmYMZ2neb6kpU2uPw0t5xq9KiuPL4GcgvN1JvlMPwxt58O5yepGIj++v8npextR923VX7gSqHKbxa8+RtnMl6HoqwweU0/y/ld4MjhaLSbGU79sAEGxM8p26IP4/cnqP04tEdTk5WZlluqhVnO3hCTgjveRfvrHNLlDH3yIAAAAASUVORK5CYII=" class="vearSmallImg"/>　
+          <text>加入滴滴网约车条件</text>　
+          <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEEAAAARCAYAAAH1fvEkAAAAAXNSR0IArs4c6QAABPRJREFUWAmVV2toXFUQnjl3k1pM66OtWFToQwqFVGt3N23UaqBafDRFoa1V1D/i44fVKhYqZDc32VgNEZ/9o4J/KlpJqUoLERVJQdFmd4MiKKJisSIKrdZHmqTZvePM3T035949d7N7IJmZb75zztw5cx6LwI2ySRKJ/UVk/e2qfg9l1j0EzvyjSoBq+0krTK4QGED3898UuandoLCPHVeyvo31wz7ZSYyD0/qR7uhPR9nUqAB6OplK/hQ7SuLA/kKXdortN1LHEqBggN0VgKdAt3CI3I4UA+Pojn1f9cx+lTDly0SSm3wSPBCy3+QjRPG/tAIB5sZf979Yp0XwYIBM6v5GBvD7VAcM8hsaKJvMsL1ac2yR1ETB5K91h7k6S8rNhfP78SxrReE8POIDdf6h++UJRb2pyYCD+Huge3CD1m2hc8a+EH+CV2oQsLIovFSugORuWAZQqlSHALpJpVQbL+U3ogbLKQaXVQd4dFz0aNMrZOI1BaSdCWcQs2NBLqkndRugd7l2mzIoBwEpt2F1XACguh2zo8+v7qYoDkrtDwWQTW+qF4D0rxTwQPoKOOf9UjOgAJdBKz5cnDF9sRlQ6k10859oLm+AjawH5ahxkZIBbSva17EoNoAFi9oaDgDw3VAAsrQNBOAHpKMRSf3pG6HkjZqY1puqCZUYQPf4t7ovZdd1A8FSbZsyvK9iJueqHzM7iU6Z5N4opm1zch+LmRzmOSNBANTfcbUeICqxr7A+inEVXVWDCUDqRRPnA2KzaZs69uRPBgFAuRzsWZPE+ncRW87BXVFM25jL57XuyzItC9nacOBTUf0AKJdcyWs0G4wmiWxfscY0q3qnBZOvf83E+ZzpMm1TR3f8R7Erk87UfmWFjCdxx3DZ7Mg32wOmber89cdMG8reqpCtDaflM63yhZu+lI0WDYSkarMMQJtCHG04eECrInnca03b1M0iVeB5fipMQkXH0+iOTpk4p3SnaZs69hZGTJtrqj1ka8NxQjuK3wL4vPaF5HkUquaqrxQ8SUJkdcI0ufIXAzjWouZL6SuTG7qcTIfofHV+DEQ3RfG6tlI3m6eijcuPnVXglV2bLxZD+AH7ir1xfr+UyuWtcX4rjuoPfqV9UHPpaTL1Jo/w7rxF2w1J5XRzAj6sx+VgV3Dp9dfj1PgQf+YEyJPL2ujpa5YA0h1WZxxIcApzxffFbT2CuAKGOQFb4vpbcYXbucyOWn1VkOQR4Hn8DG6m4a/g5nviepDbeTEk8M44vxVH/Atyxfe0ryYJnIADvAW2aUJDUqn75E1fj0vPJJfCjPdcPU6tj1+vasteRPR/7ET95K69EMrTzcWKzt/QVzhkjpkwB+Yt8AYn4F4Tm1NX8CBvgbfq8WjfxiUwdXaIOXXPoMgYp6B9+R7c4XoR3Ddp8LoFMDG53eaLx/A/ULcPmwkQbhAUV8CrnIBH4weweBTu4grYb/EEED17/UUwOfUyH7OhhAcEu3KG38iPR5+omkpDm8+Hf07fLc8BjTUgz8Kale9EL3vp5w/CFTDUfALUnjkT4K5fCJOTfM01kQDEf2HxJU/EJuCFzvkw8eddzSVATYGz8KAtAX4SqDed40PwqQYyOUtRkOEtYL/bqyxyu9r4GnyJzdbZjnNoCBNwQctufGxk2sakV26dB2emd/Lzq5mqOgfO8oP84CnZxhTsfzOkyUmK9kqyAAAAAElFTkSuQmCC" class="vearSmallImg"/>
+
+        </view>
+        <view class="smallBox">
+          <view class="smallBoxFrist">
+            驾驶员要求
+          </view>
+          <view class="smallBoxSecond">
+            1. 年龄：男21-60周岁，女21-55周岁（分城市要求不同）
+          </view>
+          <view class="smallBoxSecond">
+            2. 驾驶证准驾车型：至少含A1、A2、A3、B1、B2、C1、C2
+          </view>
+          <view class="smallBoxSecond">
+            3. 驾驶证初次领证日期（驾龄）：至今满3年及以上
+          </view>
+          <view class="smallBoxLast" >
+            4. 无暴力犯罪记录，无交通肇事犯罪、危险驾驶犯罪记录，无吸毒记录，无饮酒后驾驶记录
+          </view>
+        </view>
+        <view class="feetContent">
+          卢阿卢阿德玛西亚  京ICP备123123123号-4
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+

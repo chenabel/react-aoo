@@ -1,0 +1,161 @@
+/**app.wxss**/
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  color:#ffffff;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color:#FFFFFF;
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color:#39b54a;
+}
+
+::-webkit-scrollbar  
+{  
+    width: 0;  
+    height: 0; 
+    color: transparent;  
+} 
+
+.textCentent{
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'iconfont';  /* Project id 2488577 */
+  src: url('//at.alicdn.com/t/font_2488577_b9zphb0fals.woff2?t=1620095705841') format('woff2'),
+       url('//at.alicdn.com/t/font_2488577_b9zphb0fals.woff?t=1620095705841') format('woff'),
+       url('//at.alicdn.com/t/font_2488577_b9zphb0fals.ttf?t=1620095705841') format('truetype');
+}
+
+.iconshunfengche:before {
+  content: "\e615";
+}
+
+.iconcesuo1:before {
+  content: "\e612";
+}
+
+.iconshizhong:before {
+  content: "\e613";
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iconyue:before {
+  content: "\e614";
+}
+
+.iconqianbao1:before {
+  content: "\e60d";
+}
+
+.iconche:before {
+  content: "\e610";
+}
+
+.iconjiazhaojiashizhenghangshizheng:before {
+  content: "\e60f";
+}
+
+.iconguizeshuoming:before {
+  content: "\e60e";
+}
+
+.icondingdan:before {
+  content: "\e60c";
+}
+
+.iconqianbao:before {
+  content: "\e60b";
+}
+
+.iconshezhi:before {
+  content: "\e60a";
+}
+
+.iconkefu:before {
+  content: "\e609";
+}
+.iconwode:before {
+  content: "\e608";
+}
+
+.iconshouye1:before {
+  content: "\e607";
+}
+
+.icontubiao_qidian_lanse:before {
+  content: "\e606";
+  color: cornflowerblue;
+}
+
+.icontubiao_zhongdian_hongse:before {
+  content: "\e605";
+  color: orangered;
+}
+
+.icondidichuhang:before {
+  content: "\e604";
+}
+
+.iconxiangyou:before {
+  content: "\e603";
+  
+}
+
+.iconhome:before {
+  content: "\e601";
+}
+
+.iconleft:before {
+  content: "\e602";
+}
+
+
+
+
+
+
+.pageHead{
+  width: 750rpx;
+}
+
+.zhuTi{
+  width: 700rpx;
+  position: fixed;
+  top: 0rpx;
+  bottom: 100rpx;
+  left: 25rpx;
+}
+.wx-switch-input{width:42px !important;height:22px !important;}
+.wx-switch-input::before{width:40px !important;height: 20px !important;}
+.wx-switch-input::after{width: 20px !important;height: 20px !important;}

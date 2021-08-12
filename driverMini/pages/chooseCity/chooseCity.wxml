@@ -1,0 +1,31 @@
+<!--pages/chooseCity/chooseCity.wxml-->
+<view>
+  <view>
+    <head page-name="请选择城市"></head>
+  </view>
+  <view class="zhuTi">
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text" class="weui-search-bar__input" bindinput="postCityKey" placeholder="请输入城市首字母"  value="{{inputCityName}}" />
+          <view class="weui-icon-clear" wx:if="{{inputCityName.length > 0}}" bindtap="cleaeInputCityName">
+            <icon type="clear" size="18"></icon>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view>
+      <view wx:for="{{tempList}}" wx:key="index" class="showBox" bindtap="cityClick" data-cityName="{{item.cityName}}">{{item.cityName}}</view>
+    </view>
+    <view class="allCityBox">
+      <view class="allCityBoxLeft">
+        <view wx:for="{{citys}}" wx:key="index">
+          <view class="cityName" bindtap="cityClick" data-cityName="{{items.cityName}}" wx:for="{{item}}" wx:key="key" wx:for-item="items">
+            {{items.cityName}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

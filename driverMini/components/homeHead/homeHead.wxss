@@ -1,0 +1,56 @@
+.head {
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  background: linear-gradient(to right,#3B4054,#505B78);
+  display: flex;
+  justify-content: flex-start;
+  position: fixed;
+  top: 0rpx;
+
+  z-index: 20;
+}
+
+.bigView{
+  width: 200rpx;
+  display: flex;
+  justify-items: center;
+  margin-left: 20rpx;
+}
+
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1618451773341'); /* IE9 */
+  src: url('iconfont.eot?t=1618451773341#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAALwAAsAAAAABqgAAAKjAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCfgqBGIEbATYCJAMMCwgABCAFhG0HNRvYBcguoRzbUQQRmB0wwSLFpRueYP+yvHj42u937ttFPaklhirWIRGylkB1yXjIDKmQPXT+r/vlO+KN3dJklggU4Osd99LfAaBi4YCEYzeWCG5CrwECzMy3AbB0vQ4Q6IxeV//pCzDv81xObwKdHc0PdE53jW1jDVq0qRdgHFCAe2EUSMAFEnoGyysP0g16dZ9AtS5hZEsFZXWglUXLArFlt7aBtpeSZVWtFMpn9mZxTKWy2CmuAByV348/iElLoSyJ1q4svxOy7leu2C6NQmNOSINAD5chYQLIxOpsaYVCKE6huqQ0AL41LfjsP59yj/gqXxB/XVJfC0ZoueBTalc6o5RWEijv14wCkyJXK3/jEP0M7MyPdK5sPN93BMtH3wYNsrvXGsPeM6h5fA/FxePrbXtPTSfW0tDYyJqEnBlp25jgFk6GbN71qLwO7Ah8CXy8P9kOGb0w3rTt6/PL+/HG3eVqaAUoUZwrcmnd/ShMXvqTf0uVLZa0tYYMPnY0TZMlSsA9Kn8SDgzMCA5k3xy5U3YNqSGMJP1AoIBqOqpUFGv2etzVBjcTKrUdiFTobJFUGiAzO4EyNaZQrtIsqo0rPFyjBacQuQpjpghCo0MU6r0jaXRNZvYFZdr9oVxjClRbzf/MGkPZ9bkc2wR2kvY+Yu9gHpp4hb5qrEFrl6uNd82l0IBcsmdJdETUsFqIHuRXbJC6rTFCUEI5c5MC8hi6XIx4OXNgh4iwCeFNiYykcy+K6GBu0FvEoTYC6kS060PYdWA8aD5a0I8+XwNZdXFpw1f6euoGiJPYJyeiRYgCyEKHB+r7lWck3axiCAJFUBzjRhSQWcjFhSG887McUAchgu1AwStFZDyMoo6I511u8x2DatFVKYpIkeU15kalC6kAAAA=') format('woff2'),
+  url('iconfont.woff?t=1618451773341') format('woff'),
+  url('iconfont.ttf?t=1618451773341') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1618451773341#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 30rpx;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iconhome:before {
+  content: "\e601";
+  line-height: 15rpx;
+}
+
+.iconleft:before {
+  content: "\e602";
+  line-height: 15rpx;
+}
+
+.pageName{
+  width: 750rpx;
+  height: 70rpx;
+  text-align: center;
+  font-size: 30rpx;
+  line-height: 70rpx;
+  color: white;
+  font-weight: 450;
+}

@@ -1,0 +1,251 @@
+/**index.wxss**/
+.miniApp{
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.zhuTi{
+  width: 750rpx;
+  position: relative;
+  top: 0rpx;
+  bottom: 100rpx;
+  left: 0rpx;
+}
+
+.zhuTiBg {
+  height: 500rpx;
+  background-image: url("https://dpubstatic.udache.com/static/dpubimg/a8a6c0b3-2a1a-48d6-b81a-515170195f8a.png");
+  background-size: 100% 100%;
+}
+
+.zhuTiBox{
+  width: 700rpx;
+  margin: 0 auto;
+  position: relative;
+  top: -200rpx;
+  bottom: 0rpx;
+}
+
+.zhuTiFrist1{
+  background:#fff;
+  width: 700rpx;
+  min-width: 600rpx;
+  height: auto;
+  margin: 0 auto;
+  border:1px solid #fff;
+  box-shadow: 0 10px 20px 0 rgb(65 65 65 / 10%);
+  margin-top: 20rpx;
+  border-radius: 14rpx;
+}
+
+.zhuTiFrist{
+  background:#fff;
+  width: 700rpx;
+  height: 600rpx;
+  margin: 0 auto;
+  border:1px solid #fff;
+  box-shadow: 0 10px 20px 0 rgb(65 65 65 / 10%);
+  margin-top: 20rpx;
+  border-radius: 14rpx;
+}
+
+.vearSmallImg{
+  width: 40rpx;
+  height: 10rpx;
+}
+
+.headerTitle{
+  display: flex;
+  font-display: row;
+  align-items: center;
+  font-size: 40rpx;
+  line-height: 40rpx;
+  justify-content: center;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.headerTwoBtn{
+  width: 650rpx;
+  height: 100rpx;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.iHaveCar{
+  width: 300rpx;
+  height: 100rpx;
+  border-radius: 7rpx;
+  border: 1rpx solid #ff7e33;
+  text-align: center;
+  line-height: 100rpx;
+  color: #ff7e33;
+  position: relative;
+  font-size: 30rpx;
+}
+
+.selected{
+ position: absolute;
+ top: 0rpx;
+ right: 0rpx;
+ width: 60rpx;
+ height: 60rpx;
+ border-radius: 7rpx;
+ display: block;
+}
+.inputCodeBox{
+  width: 650rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  /* border: 2rpx solid #ff7e33; */
+  border-radius: 7rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.inputCode{
+  width: 300rpx;
+  height: 100rpx;
+  border: 2rpx solid #ff7e33;
+  border-radius: 7rpx;
+  padding-left: 20rpx;
+  font-size: 30rpx;
+
+}
+.getCode{
+  width: 300rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;  
+  border: 2rpx solid #ff7e33;
+  border-radius: 7rpx;
+  font-size: 30rpx;
+}
+.treatyBox{
+  width: 650rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 30rpx;
+}
+.iHaveCar2{
+  width: 300rpx;
+  height: 100rpx;
+  border-radius: 7rpx;
+  border: 1rpx solid #dcdcdc;
+  text-align: center;
+  line-height: 100rpx;
+  color: #646466;
+  position: relative;
+  background: #f3f3f3;
+  font-size: 30rpx;
+}
+
+.selected2{
+  position: absolute;
+  top: 0rpx;
+  right: 0rpx;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 7rpx;
+  display: none;
+ }
+ .telInputBox{
+   width: 650rpx;
+   margin: 0 auto;
+   margin-top: 20rpx;
+   border-radius: 7rpx;
+ }
+
+.telInput{
+  padding-left: 20rpx;
+  font-size: 30rpx;
+  height: 100rpx;
+  border: 2rpx solid #ff7e33;
+}
+.tips{
+  width: 650rpx;
+  margin: 0 auto;
+  height:30rpx;
+  line-height: 30rpx; 
+  color: rgb(203,43,41);
+  font-size: 20rpx;
+}
+.getAddBox{
+  width: 650rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  border-radius: 7rpx;
+  height: 100rpx;
+}
+
+.getAddFoo{
+  position: relative;
+  right: -500rpx;
+  top: -100rpx;
+  line-height: 100rpx;
+  height: 100rpx;
+  color: #ff7e33;
+  z-index: 99;
+  font-size: 30rpx;
+  display: flex;
+}
+
+.doResgisterBox{
+  width: 650rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  border-radius: 7rpx;
+  position: relative;
+  height: 100rpx;
+  font-size: 30rpx;
+  margin-bottom: 40rpx;
+}
+
+.doResgister{
+  width: 600rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  margin: 0 auto;
+  font-size: 30rpx;
+  background-image: -webkit-linear-gradient(135deg,#ff9143,#ff5303);
+  border-radius: 60rpx;
+  color: white;
+  font-size: 24px;
+
+}
+
+.smallBox{
+  width: 650rpx;
+  margin: 0 auto; 
+  height: 75%; 
+  font-size:30rpx ;
+}
+.smallBoxFrist{
+  font-weight: 900;
+}
+.smallBoxSecond{
+  width: 600rpx;
+  margin: 0 auto;
+}
+.smallBoxLast{
+  width: 600rpx;
+  margin: 0 auto;
+  color: #ff9143;
+}
+.feetContent{
+  text-align: center;
+  font-size: 20rpx;
+  color: #969699;
+}
+.tip{
+  color: white;
+  width: 600rpx;
+  height: 100rpx;
+  margin: 0 auto;
+  position: absolute;
+  background:rgb(200, 200, 200);
+}

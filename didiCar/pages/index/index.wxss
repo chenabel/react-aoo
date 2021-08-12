@@ -1,0 +1,260 @@
+/**index.wxss**/
+page {
+  height: 100%;
+ 
+}
+.page {
+  background:rgba(255, 255, 255, 1);
+  height: 50px;
+}
+
+.contain{
+  width: 100%;
+  height: 100%;
+}
+.tab{
+  width: 100%;
+  height: 100rpx;
+  white-space: nowrap;
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 100rpx;
+ 
+ 
+}
+.tab-item{
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+  font-size: 14px;
+  color: #8f9193;
+}
+.active{
+  color: #ff502c
+}
+.caractive{
+  color: #ff502c;
+  border-bottom:3px solid #ff502c;
+}
+.hitchrole {
+  color:  #56ba90;
+  border-bottom:3px solid  #56ba90;
+}
+.content{
+  padding-top: 100rpx;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 14px;
+}
+.content-item{
+  overflow-y: scroll
+}
+.alltab {
+  display: flex;
+  align-items: center;
+}
+.person image,.square_menu image{
+  width: 20px;
+  height: 22px;
+}
+.person_btn {
+  background: pink;
+  width: 10px;
+  height: 12px;
+  
+}
+.person {
+  margin-left: 15px;
+  margin-right: 25px;
+}
+.square_menu {
+  margin-right: 15px;
+  margin-left: 25px;
+}
+
+map {
+  width: 100%; 
+  height: 100vh;
+}
+
+.input_Adr {
+  position: fixed;
+  width: 85%;
+  height: 106px;
+  padding: 13px 16px;
+  bottom: 8%;
+  left: 2.5%;
+  background: white;
+  border-radius: 33rpx;
+  
+}
+.optionInfo {
+  position: fixed;
+  width: 100%;
+  height: 236px;
+  bottom: 3%;
+  left: 0;
+  background: white;
+  
+
+}
+
+.row_one ,.row_two {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #aaa;
+  padding: 10px 0;
+}
+.row_price , .callFastCar{
+  text-align: center;
+}
+.row_price{
+  margin: 20px 0;
+  
+}
+.row_price text {
+  font-size: 24px;
+  font-weight: 600;
+}
+.callFastCar {
+  height: 20px;
+  padding: 12px 0;
+  background: #0b1e44;
+  color: white;
+  width: 94%;
+  margin: 0 auto;
+  border-radius: 17rpx;
+}
+.start_row,.end_row {
+  height: 53px;
+  display: flex;
+  align-items: center;
+}
+.hitchStart_row {
+  height: 53px;
+  display: flex;
+  align-items: center;
+  background: #f6f7f7;
+  border-radius: 20rpx;
+  margin: 5px 0;
+}
+
+.end_img {
+  width: 15px;
+  height: 15px;
+
+}
+.end_Adr {
+  line-height: 53px;
+  border: none;
+  width: 90%;
+  
+}
+.start_Adr {
+  border-bottom: 1px solid #aaa;
+  padding-left: 8px;
+}
+.adrtip {
+   color: #63b9a4;
+   font-size: 10px;
+}
+.hitch {
+  display: flex;
+  height: 30px;
+  padding: 5px 10px;
+  margin-top: 4px;
+  font-size: 14px;
+  color: #8f9193;
+  box-shadow:0px 0px  10px 5px #eaeaea;
+
+}
+.hitch .row {
+  margin: 0 16px;
+}
+.carOwner {
+  margin-top: 5px;
+}
+.carOwner image{
+  width: 100%;
+  height: 180px;
+}
+.hitchInros {
+   margin-top: 15px;
+}
+.hitchInros .row_1 {
+  font-weight: 600;
+  font-size: 24px;
+  width: 250px;
+  margin: 0 auto;
+  text-align: center;
+}
+.hitchInros .row_2{
+  font-weight: 520;
+  font-size: 24px;
+  width: 230px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.docarOwner {
+    margin: 0 auto;
+    margin-top: 20px;
+    background-image: linear-gradient(to right,#55b8b0,#61cb9e);
+    color: white;
+    width: 280px;
+    border-radius: 20rpx;
+    text-align: center;
+    height: 28px;
+    line-height: 28px;
+    padding: 10px 0;
+    font-size: 17px;
+}
+.headtip {
+  color: #55b8b0;
+  position: fixed;
+  top: 30%;
+  left: 10%;
+  font-weight: 600;
+}
+.hitchPassenger {
+  margin-top: 10px;
+  width: 100%;
+  height: 250px;
+}
+.hitchInput {
+  background: white;
+  position: fixed;
+  bottom: 15%;
+  width: 90%;
+  left: 2%;
+  padding: 10px;
+  border-radius: 18rpx;
+  box-shadow:0px 0px  10px 5px #eaeaea;
+}
+.hitchrow_2{
+  display: flex;
+  border-radius: 18rpx;
+  justify-content: space-between;
+  
+}
+.hitchrow_2 image{
+   width: 15px;
+   height: 15px;
+   margin-right: 4px;
+}
+.hitchrow_2 .passengerNum,.hitchrow_2 .time{
+  display: flex;
+  align-items: center;
+  width: 40%;
+  height: 50px;
+  border-radius: 18rpx;
+  background: #f6f7f7;
+  font-size: 15px;
+  padding-left: 4px;
+}
+
+.hitchrow_2 .time {
+  width: 56%;
+  font-size: 13px;
+}

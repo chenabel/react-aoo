@@ -1,0 +1,48 @@
+/* pages/rules/rules.wxss */
+.zhuTi{
+  background: #f7f7f7;
+  width: 100%;
+  position: fixed;
+  left: 0rpx;
+  bottom: 100rpx;
+  overflow:scroll;
+}
+
+.topTitle{
+  display: flex;
+  flex-direction: column;
+}
+
+.body{
+  margin-top: 20rpx;
+  width: 700rpx;
+  position: fixed;
+  bottom: 100rpx;
+  left: 25rpx;
+}
+
+.item{
+  font-size: 40rpx;
+  text-align: center;
+}
+
+.tip{
+  font-size: 30rpx;
+  font-weight: 100;
+  text-align: center;
+}
+
+.title{
+  font-size: 40rpx;
+  text-align: left;
+}
+.rulesOne{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.centent{
+  margin-top: 100rpx;
+  font-size: 40rpx;
+}

@@ -1,0 +1,62 @@
+/* pages/changePerson/person.wxss */
+.carinfos {
+    background: #f9f9f9;
+    padding: 10px 10px 80px;
+   
+    
+}
+.carinfos_con ,.history_info{
+  box-shadow:0px 0px  10px 5px #eaeaea;
+  border-radius: 8rpx;
+  margin-top: 18px;
+  background: white;
+}
+.tips {
+  margin-top: 8px;
+  padding: 0 15px;
+}
+.tip_two {
+  font-size: 12px;
+  margin-top: 8px;
+}
+.carinfos input{
+  background: white;
+  padding: 20px 12px;
+  border: none;
+  border-radius: 0;
+}
+.carinfos input:first-child{
+  border-radius: 10rpx 10rpx 0 0;
+
+}
+
+.carinfos input:nth-child(2){
+  border-radius: 0 0 10rpx 10rpx;
+}
+.carinfos_con .row_one {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 14px 14px 8px;
+  
+}
+.carinfos_con .row_two {
+   font-size: 14px;
+   padding: 0 14px;
+   color: #808080;
+}
+
+.history_info .row_one ,.history_info .row_two{
+  padding: 20px;
+  font-weight: 550;
+}
+
+.history_info .row_two{
+    border-top: 1px solid #aaa;
+}
+.btn {
+  text-align: center;
+  background: #484a57;
+  color: white;
+  padding: 16px 0;
+  margin-top: 22px;
+}

@@ -1,0 +1,52 @@
+<!--pages/user/index.wxml-->
+<arrow bindtap="intoIndex"></arrow>
+<view class="contain" style="margin-top:{{pageToHeight}}px">
+    
+
+    <view class="container">
+      <view class="text-center head_photo">
+        <image src='{{userInfo.avatarUrl}}'/>
+      </view>
+      <view class="text-center phone">{{tel}}</view>
+    </view>
+    <view class="all_list">
+        <view class="list" bindtap="intoMyorder">
+           <view class="list_row">
+              <image src="/icons/route.png" />
+              <view class="row">行程</view>
+           </view>
+           <view>
+              <image src="/icons/greater.png" />
+           </view>
+
+        </view>
+        <view class="list" bindtap="intoMywallet">
+           <view class="list_row">
+              <image src="/icons/wallet.png" />
+              <view class="row">钱包</view>
+           </view>
+           <view>
+              <image src="/icons/greater.png" />
+           </view>
+        </view>
+        <view class="list">
+            <view class="list_row">
+                <image src="/icons/design.png" />
+                <view class="row">设置</view>
+            </view>
+            <view>
+              <image src="/icons/greater.png" />
+           </view>
+        </view>
+        <view class="list">
+            <view class="list_row">
+                <image src="/icons/customer.png" />
+                <view class="row">在线客服</view>
+            </view>
+            <view>
+              <image src="/icons/greater.png" />
+           </view>
+        </view>
+    </view>
+
+</view>

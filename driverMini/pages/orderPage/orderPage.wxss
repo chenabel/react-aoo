@@ -1,0 +1,178 @@
+.pageHead{
+  width: 750rpx;
+}
+
+.zhuTi{
+  width: 100%;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  right: 0rpx;
+  background: #f7f7f7;
+}
+
+.zhuTi map{
+  width: 100%;
+  height:100vh;
+  margin-top:0rpx;
+}
+
+.orderInfo{
+  width: 700rpx;
+  height: 200rpx;
+  position: fixed;
+  bottom: 0rpx;
+  left: 25rpx;
+  border-radius: 40rpx ;
+  box-shadow: 0rpx -30rpx 30rpx  rgb(65 65 65 / 10%);
+  background: #000;
+}
+
+.boxOne{
+  width: 700rpx;
+  height:200rpx;
+  background: white;
+  border-radius: 40rpx 40rpx 40rpx 40rpx;
+  box-shadow: 0rpx -30rpx 30rpx  rgb(65 65 65 / 10%);
+}
+
+.boxTwo{
+  margin-top: 20rpx;
+  width: 700rpx;
+  height:500rpx;
+  background: white;
+  border-radius: 40rpx 40rpx 40rpx 40rpx;
+  box-shadow: 30rpx 10rpx 10rpx  rgb(65 65 65 / 10%);
+}
+.title{
+  width: 100%;
+  text-align: center;
+  font-size: 40rpx;
+
+}
+.title text{
+  color: orange;
+}
+.userOutCar{
+  width: 400rpx;
+  height: 100rpx;
+  background: orange;
+  border-radius: 20rpx;
+  text-align: center;
+  line-height: 100rpx;
+  z-index: 20rpx;
+  position: absolute;
+  bottom: 0rpx;
+  left: 160rpx;
+}
+
+.msgText{
+  width: 530rpx;
+  border-radius: 20rpx;
+  border:4rpx solid rgb(170, 170, 170);
+  height: 80rpx;
+  background: white;
+  padding-left: 20rpx;
+  z-index: 99;
+}
+
+.msgTitle{
+  width: 650rpx;
+  margin:0 auto;
+}
+
+.sendMsgBox{
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 650rpx;
+  z-index: 20;
+}
+
+.sendMsg{
+  width: 120rpx;
+  height: 80rpx;
+  border:4rpx solid rgba(170, 170, 170,0.1);
+  background: linear-gradient(to right,#3B4054,#505B78);
+  color: white;
+  border-radius: 20rpx;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.msgBox{
+  width: 100%;
+  margin:0 auto;
+  height: 300rpx;
+  overflow: scroll;
+}
+
+.orderBox{
+  width: 90%;
+}
+
+.Time{
+  text-align: center;
+  width: 600rpx;
+  color: #b8b4b4;
+}
+
+.msg{
+  width: 650rpx;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.msgTent{
+  width: 550rpx;
+  overflow: auto;
+}
+.msgTent1{
+  width: 550rpx;
+  overflow: auto;
+}
+.msgTentAndUserBox{
+  width: 650rpx;
+  display: flex;
+  flex-direction: row;
+}
+.userBox{
+  width: 100rpx;
+  height: 50rpx;
+  border: 2rpx solid #b9b9b9;
+  border-radius: 20rpx;
+}
+.userBox1{
+  width: 100rpx;
+  height: 50rpx;
+  border: 2rpx solid #b9b9b9;
+  border-radius: 20rpx;
+}
+.jianTou{
+  width: 50rpx;
+  height: 40rpx;
+  transform:rotate(180deg);  
+  position: absolute;
+  bottom: 0rpx;
+}
+.jianTou1{
+  width: 50rpx;
+  height: 40rpx;
+  transform:rotate(180deg);  
+  position: absolute;
+  bottom: 20rpx;
+}
+.boxOneTop{
+  height: 90%;
+  width: 100%;
+  position: relative;
+}
+
+.boxOneButtom{
+  width: 96%;
+  height: 20%;
+  position: relative;
+  text-align: center;
+}

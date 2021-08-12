@@ -1,0 +1,10 @@
+<view>
+  <view class="pageHead" style="height:{{headHeight}}rpx">
+    <head page-name="滴滴打车登陆页"></head>
+  </view>
+  <view class="zhuTi" style="top:{{headHeight}}rpx">
+    <view class="login" bindtap="doLogin">
+      一键登陆
+    </view>
+  </view>
+</view>

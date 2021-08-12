@@ -1,0 +1,8 @@
+<view >
+  <view class="pageHead" style="height:{{headHeight}}rpx">
+    <head></head>
+  </view>
+  <view class="zhuTi" style="top:{{headHeight}}rpx">
+    <button bindtap="sendSocket">sendSocket</button>
+  </view>
+</view>

@@ -1,0 +1,11 @@
+<!--components/pageTab/pageTab.wxml-->
+<view class="components">
+  <view class="tanBar">
+    <view class="homePeage">
+      <view class="iconfont iconshouye1" bindtap="backhome" data-url="{{pageUrl}}">订单大厅</view>
+    </view>
+    <view class="myPeage">
+      <view class="iconfont iconwode" bindtap="goMyPage" data-url="{{pageUrl}}">我的</view>
+    </view>
+  </view>
+</view>

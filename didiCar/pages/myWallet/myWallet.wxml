@@ -1,0 +1,35 @@
+<!--pages/myWallet/myWallet.wxml-->
+<view class="head" style="padding-top:{{paddingTopNum}}px" bindtap="intoIndex">
+     <view class="logo">
+          <image class="logo_img" src='/icons/arrow.png'/>
+          <view class="logo_txt">我的钱包</view>
+     </view>
+</view>
+<view class="page" style="margin-top:{{pageToHeight+30}}px">
+    <view class="row_one">
+          <view>总资产(元)</view>
+          <view bindtap="closeEyes" wx:if="{{openeyes}}">
+              <image src="/icons/openeyes.png"></image>
+          </view>
+          <view bindtap="openEyes" wx:if="{{closeeyes}}">
+              <image src="/icons/closeeyes.png"></image>
+          </view>
+          
+    </view>
+    
+     <view class="row_two" wx:if="{{money}}">{{moneynum}}</view>
+     <view class="row_two" wx:if="{{hidemoney}}">****</view>
+     <view class="recharge" bindtap="recharge">充值</view>
+     <view class="money" wx:if="{{recharge}}">
+          <view>
+               <view class="rechargeTit">充值</view>
+               <image src="/icons/cancel.png" bindtap="closeRecharge"></image>
+          </view>
+          <label>
+               输入金额：
+               <input type="text" bindinput="getMoney"/>
+          </label>
+          <view class="confirmbtn" bindtap="confirm">确定</view>
+     </view>
+
+</view>

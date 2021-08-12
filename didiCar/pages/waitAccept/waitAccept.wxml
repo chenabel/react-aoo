@@ -1,0 +1,92 @@
+<!--pages/waitAccept/waitAccept.wxml-->
+<view class="head" style="padding-top:{{paddingTopNum}}px" bindtap="cancel">
+     <view class="logo">
+          <image class="logo_img" src='/icons/arrow.png'/>
+          <view class="logo_txt" wx:if="{{wait}}">等待接驾</view>
+          <view class="logo_txt" wx:if="{{ing}}">订单进行时</view>
+          <view class="logo_txt" wx:if="{{over}}">订单结束</view>
+     </view>
+</view>
+<view class="page" style="margin-top:{{pageToHeight+5}}px">
+     <map id="myMap"
+                longitude="{{longitude}}" latitude="{{latitude}}"
+                scale='16'
+                polyline="{{polyline}}"
+                markers="{{markers}}"
+                show-location
+                >
+     </map>
+</view>
+<view class="chat" wx:if="{{chat}}">
+     <view class="closeChat" bindtap="closeChat1">
+          <view>聊天窗口</view>
+          <image src="/icons/cancel.png" ></image>
+     </view>
+     <scroll-view class="chatscroll" scroll-y='true' scroll-top="{{top}}" bindscrolltoupper="pause" bindscrolltolower="continue">
+          <view class="chatcontent" wx:for="{{chatList}}" wx:key="id">
+               <view class='time'>{{item.time}}</view>
+               <view class="userchat" wx:if="{{item.who==='user'}}">
+                    <view class="usermsg">
+                         <view class="triangle_two"></view>
+                         <view class="fill_two"></view>
+                         <view>{{item.msg}}</view>
+                    </view>
+                    <view class="uesrhead">
+                         <image class='chathead' src='{{userhead}}'/>
+                         <view>{{username}}</view>
+                    </view>
+                    
+               </view>
+               <view class="driverchat" wx:else>
+                    <view class="driverhead">
+                         <image class='chathead' src='/icons/driverhead.png'/>
+                         <view>{{driverName}}</view>
+                    </view>
+                    <view class="usermsg">
+                         <view class="triangle"></view>
+                         <view class="fill"></view>
+                         <view>{{item.msg}}</view>
+                    </view>
+               </view>
+          </view>
+     </scroll-view>
+     <view class="chattext">
+          <textarea type="tex" bindinput='changeMessage' placeholder="请输入消息" value="{{chatcontent}}"></textarea>
+          <view bindtap="sendMessage">发送消息</view>
+     </view>
+</view>
+<view class="driverallInfos" wx:if="{{allInfos}}">
+     <view class="top">
+          <view class="carInfos">
+               <view class="drlic">{{driverInfos.drplate}}</view>
+               <view class="carname">{{driverInfos.carcolor}}·{{driverInfos.cartbrand}}</view>
+               <view class="cartype">{{driverInfos.cartype}}</view>
+          </view>
+          <view>
+               <image class="driverimg" src="/icons/driverhead.png"/>
+               <view class="drivername">{{driverName}}</view>
+          </view>
+          <view class="driverInfos">
+               <view class="comment">
+                    <image class="star" src="/icons/star.png"></image>
+                    <view class="commentsorce">4.6</view>
+                    <view class="oredernum">112单</view>
+               </view>
+          </view>
+     </view>
+     <view class="footer">
+          <view bindtap="chat">
+               <image src="/icons/sendInfo.png"></image>
+               发信息
+          </view>
+          <view bindtap="calltel">
+               <image src="/icons/tel.png"></image>
+               打电话
+          </view>
+          <view>
+               <image src="/icons/cancelorder.png"></image>
+               取消订单
+          </view>
+     </view>
+</view>
+

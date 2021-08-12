@@ -1,0 +1,29 @@
+<!--pages/changePerson/person.wxml-->
+<arrowPer bindtap="intoIndex"></arrowPer>
+<view class="carinfos" style="margin-top:{{pageToHeight+8}}px">
+    <view class="tips">
+          <view class="tip_one">
+            请勿让未成年人独自乘车，请勿替陌生人叫车
+          </view>
+          <view class="tip_two">
+            未成年人乘车需由监护人陪同，若乘车人行程中违反平台规则，
+            代叫车人需承担连带责任
+          </view>
+    </view>
+    <view class="carinfos_con">
+         <view class="row_one">填写乘车人信息</view>
+         <view class="row_two">以下信息不会对司机展示</view>
+         <input type="text"  placeholder="请输入乘车人姓名(选填)" bindinput="inputName"/>
+         <input type="text" placeholder="请输入乘车人手机号码" bindinput="inputTel"/>
+    </view>
+
+    <view class="history_info">
+        <view class="row_one" >历史记录</view>
+        <block wx:for="{{passengerList}}" wx:key='id'>
+          <view class="row_two" bindtap="optionPassenger" data-curIndex="{{index}}">{{item.historypassenge_name}}({{item.historypassenge_tel}})</view>
+        </block>
+        
+    </view>
+    <view class="btn" bindtap="confirm">确认</view>
+    
+</view>

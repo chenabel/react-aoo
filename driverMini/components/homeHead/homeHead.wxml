@@ -1,0 +1,8 @@
+<view class="head" style="padding-top:{{paddingTopNum}}px">
+   <!-- <view >
+      <switch checked="{{switch1Checked}}" class="switch" bindchange="switch1Change"/>
+   </view> -->
+   <view class="pageName textCentent">
+      <text>{{pageName}}</text>
+   </view>
+</view>

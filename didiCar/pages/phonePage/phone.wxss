@@ -1,0 +1,70 @@
+/* pages/phonePage/phone.wxss */
+.head {
+  position: fixed;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  background: #fff;
+  top: 0;
+  left: 0;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+}
+.logo_img {
+  height: 23px;
+  width: 23px;
+}
+.logo_txt {
+  line-height: 30px;
+  font-size: 17px;
+  margin-left: 10px;
+  color: #020202;
+  font-weight: 580;
+}
+.page {
+  padding-top: 30px;
+}
+.phone ,.verifycode{
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  height: 60px;
+  padding-left: 15px;
+}
+.verifycode {
+  border-top: none;
+}
+.inputphone , .inputcode{
+   border: none;
+   width: 130px;
+}
+.click_verify  {
+  padding: 0;
+  background: #aaa;
+  width: 85px!important;
+  height: 30px!important;
+  line-height: 30px!important;
+  color: white;
+  text-align: center;
+  border-radius: 8rpx;
+  font-size: 12px;
+  margin-left: 10px;
+}
+.inputcode {
+  margin-left: 15px;
+}
+.commit {
+  width: 60%;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  background: #aaa;
+  color: white;
+  margin-left: 20%;
+  margin-top: 30px;
+  border-radius: 8rpx;
+}

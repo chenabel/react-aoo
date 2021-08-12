@@ -1,0 +1,269 @@
+<!--index.wxml-->
+<!-- 头部组件 -->
+<head></head>
+
+<view class="contain" style="margin-top:{{pageToHeight}}px">
+  <!-- 导航栏 -->
+  <view class="alltab">
+    <view wx:if="{{!isdest}}" class="person"  bindgetuserinfo="getUserProfile" bindtap="intoPerson">
+       <image src='/icons/person.png'/>
+    </view>
+    <view wx:else class="person" bindtap="intoIndex">
+      <image src='/icons/arrow.png'/>
+    </view>
+    <scroll-view class="tab" scroll-x scroll-left="{{tabScroll}}" scroll-with-animation="true">
+      <block wx:for="{{menuList}}" wx:key="index">
+        <view class="tab-item {{currentTab == index ? 'active' : ''}}" data-current="{{index}}" bindtap='clickMenu'>{{item.name}}</view>
+      </block>
+    </scroll-view>
+    <view class="square_menu">
+      <image src='/icons/menu.png'/>
+    </view>
+  </view> 
+
+  <!-- 滑动页面 -->
+  <!-- <swiper class="content" style='height: {{height}}px' duration="1000" current="{{currentTab}}" bindchange="changeContent">
+    <swiper-item class="content-item" wx:for="{{menuList}}" wx:key="index">111这里是{{item.name}}</swiper-item>
+  </swiper> -->
+
+  <!-- 不可滑动页面 -->
+  <view>
+       <!-- 快车 -->
+       <view wx:if="{{tabState==0}}">
+            <!-- 地图 -->
+            <map wx:if='{{isdest}}'
+                id="myMap"
+                longitude="{{longitude}}" latitude="{{latitude}}"
+                scale='16'
+                markers="{{markers}}"
+                polyline="{{polyline}}"
+                show-location
+                >
+            </map>
+            <map wx:else
+            id="myMap"
+            longitude="{{startlongitude}}" latitude="{{startlatitude}}"
+            scale='16'
+            polyline="{{polyline}}"
+            show-location
+            >
+            </map>
+            <!-- 输入地址框 -->
+            <view wx:if="{{!isdest}}" class="input_Adr">
+                 <!-- 起始点默认当前的定位 -->
+                 <view class="start_row">
+                        <image class="end_img" src="/icons/dot.png"/>
+                        <view class="start_Adr">
+                          {{startAddress}}
+                          <view class="adrtip">为您推荐附近的最佳上车点</view>
+                        </view>
+                 </view>
+                 
+                 <!-- 点击终点跳转页面 -->
+                 <view class="end_row">
+                    <image class="end_img" src="/icons/din.gif"/>
+                    <input class="end_Adr" value="{{destAddress}}" placeholder="您要去哪儿" bindtap="addEndadr"/>
+                 </view>
+                 
+            </view>
+            <view wx:else class="optionInfo"> 
+                <view class="row_one">
+                    <view class="starttime">
+                      <picker mode="multiSelector" bindchange="bindMultiPickerChange"  bindcolumnchange="bindMultiPickerColumnChange"
+                        value="{{multiIndex}}" range="{{multiArray}}">
+                        <view class="picker">
+                           {{multiArray[0][multiIndex[0]]}}{{multiArray[1][multiIndex[1]]}}
+                        </view>
+                      </picker>
+                    </view>
+                    <view class="passenger" bindtap="intochangePerson">{{showtel =='' ? '换乘车人' : passenger}}</view>
+                </view>
+                <view class="row_two">
+                  <view wx:for="{{carTypeList}}" wx:key="index">
+                    <view class=" {{currentCarType == index ?'caractive' : ''}}" bindtap="optionCartype" data-current="{{index}}">
+                        {{item}}
+                    </view>
+                  </view>
+                </view>
+                <view class="row_price">预计
+                <text>{{price}}</text>
+                元</view>
+                <view class="callFastCar" bindtap="callcar">呼叫快车</view>
+            </view>
+       </view>
+
+       <!-- 专车 -->
+       <view wx:elif="{{tabState==1}}">
+            <!-- 地图 -->
+            <map wx:if='{{isdest}}'
+                id="myMap"
+                longitude="{{longitude}}" latitude="{{latitude}}"
+                scale='16'
+                markers="{{markers}}"
+                polyline="{{polyline}}"
+                show-location
+                >
+            </map>
+            <map wx:else
+            id="myMap"
+            longitude="{{startlongitude}}" latitude="{{startlatitude}}"
+            scale='16'
+            polyline="{{polyline}}"
+            show-location
+            >
+            </map>
+            <!-- 输入地址框 -->
+            <view wx:if="{{!isdest}}" class="input_Adr">
+                 <!-- 起始点默认当前的定位 -->
+                 <view class="start_row">
+                        <image class="end_img" src="/icons/dot.png"/>
+                        <view class="start_Adr">
+                          {{startAddress}}
+                          <view class="adrtip">为您推荐附近的最佳上车点</view>
+                        </view>
+                 </view>
+                 
+                 <!-- 点击终点跳转页面 -->
+                 <view class="end_row">
+                    <image class="end_img" src="/icons/din.gif"/>
+                    <input class="end_Adr" value="{{destAddress}}" placeholder="您要去哪儿" bindtap="addEndadr"/>
+                 </view>
+                 
+            </view>
+            <view wx:else class="optionInfo"> 
+                <view class="row_one">
+                    <view class="starttime">
+                      <picker mode="multiSelector" bindchange="bindMultiPickerChange"  bindcolumnchange="bindMultiPickerColumnChange"
+                        value="{{multiIndex}}" range="{{multiArray}}">
+                        <view class="picker">
+                           {{multiArray[0][multiIndex[0]]}}{{multiArray[1][multiIndex[1]]}}
+                        </view>
+                      </picker>
+                    </view>
+                    <view class="passenger" bindtap="intochangePerson">{{showtel =='' ? '换乘车人' : passenger}}</view>
+                </view>
+                <view class="row_two">
+                  <view wx:for="{{carTypeList}}" wx:key="index">
+                    <view class=" {{currentCarType == index ?'caractive' : ''}}" bindtap="optionCartype" data-current="{{index}}">
+                        {{item}}
+                    </view>
+                  </view>
+                </view>
+                <view class="row_price">{{price}}元</view>
+                <view class="callFastCar" bindtap="callcar">呼叫快车</view>
+            </view>
+       
+       </view>
+            
+       <!-- 顺风车 -->
+       <view  wx:elif="{{tabState==2}}">
+            <view class="hitch">
+                  <view wx:for="{{hitchList}}" wx:key="index">
+                      <view class= " row {{currentHitch == index ?'hitchrole' : ''}}" bindtap="optionRole" data-current="{{index}}">
+                          {{item}}
+                      </view>
+                  </view>
+            </view>
+            
+            <!-- 顺风车乘客 -->
+            <view wx:if="{{currentHitch===0}}">
+                 <image class="hitchPassenger" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fq_70%2Cc_zoom%2Cw_640%2Fimages%2F20180826%2Fad81792c4d6d4b6bbca8dffa111a6965.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1622131218&t=d98bc913b5eb8f1cd0d36d60f42d18aa"></image>
+                 <view class="headtip">出行一口价，越远越划算</view>
+                 <view class="hitchInput">
+                        <!-- 起始点默认当前的定位 -->
+                      <view class="hitchStart_row">
+                              <image class="end_img" src="/icons/dot.png"/>
+                              <view>
+                                {{startAddress}}
+                              </view>
+                      </view>
+                 
+                      <!-- 点击终点跳转页面 -->
+                      <view class="hitchStart_row" bindtap="addEndadr">
+                          <image class="end_img" src="/icons/dot2.png"/>
+                          <input class="end_Adr" value="{{destAddress}}" placeholder="您要去哪儿" bindtap="addEndadr"/>
+                      </view>
+                      <view class="hitchrow_2">
+                            <view class="passengerNum">
+                              <image src="/icons/person.png"></image>
+                              <picker mode="selector" bindchange="changePassengerNum" value="{{passengerNumIndex}}" range="{{passengerNumList}}">{{hitchOptNum || '乘车人数'}}</picker>
+                            </view>
+                            <view class="time">
+                                <image src="/icons/clock.png"></image>
+                                <view>
+                                    <picker  mode="multiSelector" value="{{hitchIndex}}" range="{{hitchArray}}" bindchange="hitchFirPickerChange">{{firstHitchTime || '最早出发时间'}}</picker>
+                                    <picker  mode="multiSelector" value="{{hitchIndex}}" range="{{hitchArray}}" bindchange="hitchLastPickerChange">{{lastHitchTime || '最晚出发时间'}}</picker>
+                                </view>
+                            </view>
+                      </view>
+
+                      <view class="docarOwner" bindtap="bookHitch">{{showHitchPrice || '预约顺风车'}}</view>
+                 </view>  
+                  
+            </view>
+
+            <!-- 顺风车车主 -->
+            <view wx:if="{{currentHitch===1}}">
+                <view class="carOwner">
+                <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fnews.mydrivers.com%2Fimg%2F20180826%2Fba89595971914908ac6eb0ccf6d4332a.jpg&refer=http%3A%2F%2Fnews.mydrivers.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1622124262&t=b57f0d2fffed57a792cf3f8763f66815"></image>
+                </view>
+                <view class="hitchInros" >
+                    <view class="row_1">顺路接单分摊出行成本</view>
+                    <view class="row_2">
+                        <view>绿</view>
+                        <view>色</view>
+                        <view>出</view>
+                        <view>行</view>
+                      </view>
+                    <view class="docarOwner">立即成为车主</view>
+                </view>
+            </view>
+            
+       </view>
+
+       <!-- 出租车 -->
+       <view wx:elif="{{tabState==3}}">4</view>
+
+       <!-- 代驾 -->
+       <view wx:else="{{tabState==4}}">
+            <view>
+                 <image class="hitchPassenger" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fdingyue.ws.126.net%2F2020%2F0523%2F7664796ap00qar0ee00hmd200pf00gyg00gx00ba.png&refer=http%3A%2F%2Fdingyue.ws.126.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1622356571&t=67e2f8900af8631664cf0b8b8bb8c0ba"></image>
+                 <view class="hitchInput">
+                        <!-- 起始点默认当前的定位 -->
+                      <view class="hitchStart_row">
+                              <image class="end_img" src="/icons/dot.png"/>
+                              <view>
+                                {{startAddress}}
+                              </view>
+                      </view>
+                 
+                      <!-- 点击终点跳转页面 -->
+                      <view class="hitchStart_row" bindtap="addEndadr">
+                          <image class="end_img" src="/icons/dot2.png"/>
+                          <input class="end_Adr" value="{{destAddress}}" placeholder="您要去哪儿" bindtap="addEndadr"/>
+                      </view>
+                      <view class="hitchrow_2">
+                            <view class="passengerNum">
+                              <image src="/icons/person.png"></image>
+                              <picker mode="selector" bindchange="changePassengerNum" value="{{passengerNumIndex}}" range="{{passengerNumList}}">{{hitchOptNum || '乘车人数'}}</picker>
+                            </view>
+                            <view class="time">
+                                <image src="/icons/clock.png"></image>
+                                <view>
+                                    <picker  mode="multiSelector" value="{{hitchIndex}}" range="{{hitchArray}}" bindchange="hitchFirPickerChange">{{firstHitchTime || '最早出发时间'}}</picker>
+                                    <picker  mode="multiSelector" value="{{hitchIndex}}" range="{{hitchArray}}" bindchange="hitchLastPickerChange">{{lastHitchTime || '最晚出发时间'}}</picker>
+                                </view>
+                            </view>
+                      </view>
+
+                      <view class="docarOwner" bindtap="bookHitch">{{showHitchPrice || '预约代驾'}}</view>
+                 </view>  
+                  
+            </view>
+       
+       </view>
+       
+  </view>
+</view>
+
+

@@ -1,0 +1,16 @@
+/**app.wxss**/
+
+image{
+  width: 100%;
+}
+.text-center{
+   text-align: center;
+}
+.container{
+  padding: 0 10px;
+}
+input{
+  border: 2rpx solid #ccc;
+  border-radius: 8rpx;
+  padding: 10rpx 16rpx;
+}

@@ -1,0 +1,13 @@
+<view class="head" style="padding-top:{{paddingTopNum}}px">
+   <view class="bigView">
+      <view class="logo" bindtap="_navback">
+         <text class="iconfont iconleft"></text>
+      </view>　
+      <view class="logo" bindtap="_backhome">
+         <text class="iconfont iconhome"></text>
+      </view>
+   </view>
+   <view class="pageName textCentent">
+      <text>{{pageName}}</text>
+   </view>
+</view>

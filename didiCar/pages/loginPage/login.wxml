@@ -1,0 +1,14 @@
+<!--pages/loginPage/login.wxml-->
+<view class="head" style="padding-top:{{paddingTopNum}}px" bindtap="intoIndex">
+     <view class="logo">
+          <image class="logo_img" src='/icons/arrow.png'/>
+     </view>
+</view>
+
+<view class="content" style="margin-top:{{pageToHeight}}px">
+     <image class="didiLogo" src="http://a1.qpic.cn/psc?/V10TaJO64ZiCox/bqQfVz5yrrGYSXMvKr.cqTLSaaS*00CPq1NagqE.rveRRBH4XvQd3vwkNwYxfoGTEXJN4Aq2nz2QAdxvTOupyi9b.c2AejGdSUlozXKw5Vs!/b&ek=1&kp=1&pt=0&bo=ygE1AcoBNQEDEDU!&tl=1&vuin=779126544&tm=1618797600&sce=60-1-1&rf=0-0"/>
+     <view class="login_btn" bindtap="getUserProfile">
+           <image class="wechatlogo" src="/icons/wechat.png"/>
+           <view>微信用户一键登录</view>
+     </view>
+</view>

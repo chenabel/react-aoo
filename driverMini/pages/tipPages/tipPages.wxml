@@ -1,0 +1,96 @@
+<view>
+  <view class="pageHead" style="height:{{headHeight}}rpx">
+    <head page-name='请认真填写下列信息'></head>
+  </view>
+  <view class="zhuTi" style="top:{{headHeight}}rpx">
+    <scroll-view class="scroll" scroll-y="true" style="top:{{headHeight}};">
+      <view>
+        <text>
+          填写完以下信息，即可获得成为滴滴司机的机会。
+        </text>
+        <view class="dataFrom">
+          <view class="view-contain-ti">
+            <text class="text-ti">姓名</text>
+            <input class="input1" bindinput="inputData" data-driverData="name"></input>
+          </view>
+        </view>
+        <view class="dataFrom">
+          <view class="view-contain-ti">
+            <text class="text-ti">车牌</text>
+            <input class="input1" bindinput="inputData" data-driverData="carNum"></input>
+          </view>
+        </view>
+        <view class="dataFrom">
+          <view class="view-contain-ti">
+            <text class="text-ti">身份证号码</text>
+            <input class="input1" bindinput="inputData" type="number" maxlength="18" data-driverData="driverId"></input>
+          </view>
+        </view>
+        <view class="dataFrom">
+          <view class="view-contain-ti">
+            <text class="text-ti">汽车颜色</text>
+            <input class="input1" bindinput="inputData" type="number" maxlength="18" data-driverData="color"></input>
+          </view>
+        </view>
+        <view class="dataFrom">
+          <view class="view-contain-ti">
+            <text class="text-ti">汽车品牌</text>
+            <input class="input1" bindinput="inputData" type="number" maxlength="18" data-driverData="brand" ></input>
+          </view>
+        </view>
+        <view class="dataFrom">
+          <view>
+            <picker bindchange="bindPickerChange" range="{{array}}">
+              <text class="title">性别：</text>
+              <text class='select'>{{placeholder}}</text>
+            </picker>
+          </view>
+        </view>
+        <view class="fileBox">
+          <view class="fileImg">
+            身份证正面
+            <view class="imgAndErr">
+              <image class="photos" src="{{image1}}" data-src="{{image1}}" wx:if="{{image1 != ''}}"
+                bindtap="previewImage"></image>
+            </view>
+            <icon type='cancel' class="delete-btn" wx:if="{{image1 != ''}}" bindtap="deleteImg" data-index="{{image1}}">
+            </icon>
+            <view class="weui-uploader__input-box" wx:if="{{fullImg == false}}">
+              <view class="weui-uploader__input" bindtap="chooseImage"></view>
+            </view>
+          </view>
+          <view class="fileImg">
+            身份证反面
+            <view class="imgAndErr">
+              <image class="photos" src="{{image2}}" data-src="{{image2}}" wx:if="{{image2 != ''}}"
+                bindtap="previewImage"></image>
+            </view>
+            <icon type='cancel' class="delete-btn" data-index="{{image2}}" wx:if="{{image2 != ''}}" bindtap="deleteImg">
+            </icon>
+          </view>
+          <view class="fileImg">
+            驾驶证照片
+            <view class="imgAndErr">
+              <image class="photos" src="{{image3}}" data-src="{{image3}}" wx:if="{{image3 != ''}}"
+                bindtap="previewImage"></image>
+            </view>
+            <view>
+              <icon type='cancel' class="delete-btn" wx:if="{{image3 != ''}}" bindtap="deleteImg" data-index="{{image3}}">
+              </icon>
+            </view>
+          </view>
+        </view>
+        <view>
+          <!-- <button class='btn1' open-type='openSetting'> -->
+          <button class='btn1' bindtap="submitData">
+            <text class="iconfont icondidichuhang"></text>
+            <view>提交信息</view>
+          </button>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- <view class="zhuTi" style="top:{{headHeight}}rpx">
+
+  </view> -->
+</view>

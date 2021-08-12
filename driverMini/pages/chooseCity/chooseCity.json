@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "head":"../../components/header/header",
+    "mp-searchbar": "weui-miniprogram/searchbar/searchbar"
+  }
+}

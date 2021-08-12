@@ -1,0 +1,41 @@
+/* pages/user/index.wxss */
+/* pages/user/index.wxss */
+.head_photo image {
+  border-radius: 50%;
+  width: 150rpx;
+  height: 150rpx;
+}
+.phone {
+  padding-bottom: 25px;
+}
+.head_photo {
+  margin: 80px 0 12px;
+}
+.all_list {
+  background: #e9e9ea;
+  padding: 8px 0 260px;
+
+}
+.list {
+  background: white;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list_row {
+  display: flex;
+  align-items: center;
+}
+
+.row {
+  padding: 20rpx 0;
+ 
+}
+.list image {
+   width: 20px;
+   height: 20px;
+   margin-right: 10px;
+}
+
+

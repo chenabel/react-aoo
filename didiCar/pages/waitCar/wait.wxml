@@ -1,0 +1,26 @@
+<view class="head" style="padding-top:{{paddingTopNum}}px" bindtap="cancel">
+     <view class="logo">
+          <image class="logo_img" src='/icons/cancel.png'/>
+          <view class="logo_txt">等待应答</view>
+     </view>
+</view>
+
+<view class="page" style="margin-top:{{pageToHeight}}px">
+          <view class="row_1">正在为您寻找车辆</view>
+          <view class="row_2">附近的快车会优先通知</view>
+          <!-- 环形进度条 -->
+          <view class="circle">
+               <view class='progress_box'>
+                    <canvas class="progress_bg"   canvas-id="canvasProgressbg">  </canvas> 
+                    <canvas class="progress_canvas"   canvas-id="canvasProgress">  </canvas> 
+                    <view class="progress_text">
+                         <view class="progress_dot"></view> 
+                         <text class='progress_info'> {{progress_txt}}</text>
+                         <view class="waittime">{{showtime}}</view>
+                    </view>     
+               </view>
+          </view>
+
+          <view class="cancel" bindtap="cancel">取消订单</view>
+
+</view>

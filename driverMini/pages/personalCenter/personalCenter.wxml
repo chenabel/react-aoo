@@ -1,0 +1,92 @@
+<view>
+  <view class="pageHead" style="height:{{headHeight}}rpx">
+    <head page-name="个人中心"></head>
+  </view>
+  <view class="zhuTi" style="top:{{headHeight}}rpx">
+    <view class="userinfo">
+      <view class="userinfo-avatar">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <view class="userData">
+        <view class="userName">
+          <open-data type="userNickName"></open-data>
+        </view>
+        <view class="userId">
+          ID123123
+        </view>
+      </view>
+      <view class="angel"></view>
+
+    </view>
+    <view class="userImg">
+      <view class="fourBtn">
+        <view class="iconfont icondingdan" bindtap="orderClick">
+          <text class="iconText">订单</text>
+        </view>
+        <view class="iconfont iconqianbao1" bindtap="myWalletClick">
+          <text class="iconText">钱包</text>
+        </view>
+        <view class="iconfont iconkefu">
+          <text class="iconText">客服</text>
+        </view>
+        <view class="iconfont iconshezhi">
+          <text class="iconText">设置</text>
+        </view>
+      </view>
+      <view>
+      </view>
+    </view>
+    <view class="myHistory">
+      <view class="serviceBoxTitle">服务记录</view>
+      <view class="serviceBox">
+        <view class="serviceTitle">
+          <view class="sericeCentent frist">{{servicePoints}}
+            <text>服务分</text>
+          </view>
+          <view class="sericeCentent second">{{orderLen}}
+            <text>今日接单</text>
+          </view>
+          <view class="sericeCentent third">{{driverMoney}}
+            <text>今日流水</text>
+          </view>
+          <view class="sericeCentent four">{{totalMileage}}
+            <text>总里程(km)</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="myFeet autoGetOrder">
+      <view class="title">
+        <view>出车</view>
+        <view>休息</view>
+      </view>
+      <view class="autoGetOrderBtn">
+        <view class="btn" bindtap="changeState" animation='{{animationData}}'>
+          {{tipText}}
+        </view>
+      </view>
+    </view>
+    <view class="myFeet">
+      <view class="fourBtn">
+        <view class="iconfont iconqianbao1">
+          <text class="iconTextMy">驾照信息</text>
+        </view>
+        <view class="iconfont iconjiazhaojiashizhenghangshizheng">
+          <text class="iconTextMy">车辆信息</text>
+        </view>
+        <view class="iconfont iconguizeshuoming">
+          <text class="iconTextMy" bindtap="rulesClick">计费规则</text>
+        </view>
+        <view class="iconfont iconcesuo1">
+          <text class="iconTextMy">厕　所</text>
+        </view>
+      </view>
+    </view>
+    <view class="myFeet">
+      <view class="carBtn" bindtap="goOrderPage">点击进入顺风车大厅</view>
+    </view>
+  </view>
+  <view>
+    <pageTab page-url="{{nowPageUrl}}"></pageTab>
+  </view>
+</view>

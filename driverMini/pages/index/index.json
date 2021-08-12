@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "navi" : "/components/header/header",
+    "mp-toptips": "weui-miniprogram/toptips/toptips",
+    "mytips": "/components/tip/tip"
+  }
+
+}

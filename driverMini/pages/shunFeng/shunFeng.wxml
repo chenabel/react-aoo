@@ -1,0 +1,54 @@
+<!--pages/orderHall/orderHall.wxml-->
+<view class="pageCss">
+  <view class="head">
+
+    <head page-name="大厅"></head>
+  </view>
+  <pullfresh timeout='2000' background='red' bind:onRefresh='_onRefresh'
+    bind:onRestore='_onRestore' bind:onAbort='_onAbort' bind:onRefreshEnd='_onRefreshEnd' bind:onLoadmore='_onLoadmore' bind:onPulling="_onPulling">
+      <view slot='content' class="zhuTi" wx:if="{{isOrderList == true}}">
+        <scroll-viwe scroll-x="true" class="msgBox">
+          <view class="zhuTi1" wx:for="{{orderList}}" wx:key="index">
+            <view class="boxHead">
+              <view>
+                价格: <text class="opderPrice">{{item.order_price}}元</text>
+              </view>
+              <view>
+                <text>出发时间:{{item.order_starttime}}</text>
+              </view>
+            </view>
+            <view class="boxBody">
+              <view class="begin">
+                <view class="beginPlace">
+                  <icon class="iconfont icontubiao_qidian_lanse"></icon>
+                  <view class="Place">{{item.order_startadd}}</view>
+                </view>
+              </view>
+              <view>
+                <view class="endPlace">
+                  <icon class="iconfont icontubiao_zhongdian_hongse"></icon>
+                  <view class="Place">{{item.order_destadd}}</view>
+                </view>
+              </view>
+            </view>
+            <view class="boxFeet">
+              <view>全程:<text class="orderDistance">{{item.order_distance}}km</text></view>
+              <view class="getOrderBtnBox">
+                <view class="getOrderBtn" bindtap="getOrder" data-orderid="{{item.order_id}}">
+                  接单
+                </view>
+              </view>
+            </view>
+          </view>
+        </scroll-viwe>
+      </view>
+      <view slot='content' wx:if="{{isOrderList == false}}" class="noOrder">
+        <view>
+          暂无用户发布新订单，可以向下拉刷新一下试试！
+        </view>
+      </view>
+  </pullfresh>
+  <view>
+    <pageTab page-url="{{nowPageUrl}}"></pageTab>
+  </view>
+</view>

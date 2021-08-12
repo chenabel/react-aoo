@@ -1,0 +1,96 @@
+/* pages/waitCar/wait.wxss */
+.head {
+  position: fixed;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  background: #fff;
+  top: 0;
+  left: 0;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+}
+.logo_img {
+  height: 23px;
+  width: 23px;
+}
+.logo_txt {
+  line-height: 30px;
+  font-size: 17px;
+  margin-left: 10px;
+  color: #020202;
+  font-weight: 580;
+}
+.row_1 {
+  padding-top: 20px;
+  color: #646464;
+  font-size: 20px;
+  font-weight: 550;
+  text-align: center;
+
+}
+.row_2 {
+  text-align: center;
+  padding-top: 8px;
+}
+.waittime {
+  text-align: center;
+  margin-left: 8px;
+  font-size: 26px;
+}
+.cancel {
+  margin-top: 75%;
+  width: 96%;
+  margin-left: 2%;
+  position: fixed;
+  bottom: 17%;
+  
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid #aaa;
+  color: #646464;
+}
+/* 进度条 */
+.circle {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.progress_box{
+  position: relative;
+  width:220px;
+  height: 220px;  
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+}
+.progress_bg{
+  position: absolute;
+    width:220px;
+  height: 220px; 
+}
+.progress_canvas{ 
+  width:220px;
+  height: 220px; 
+} 
+.progress_text{ 
+  position: absolute; 
+  display: flex;  
+  align-items: center;
+  justify-content: center
+}
+.progress_info{   
+  font-size: 36rpx;
+  padding-left: 16rpx;
+  letter-spacing: 2rpx
+} 
+.progress_dot{
+  width:16rpx;
+  height: 16rpx;  
+  border-radius: 50%;
+  background-color: #fb9126;
+}
